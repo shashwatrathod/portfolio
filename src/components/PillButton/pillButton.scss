@@ -1,0 +1,34 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.pillBtn {
+  background-color: $primary;
+  color: $textPrimary;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  border: 0px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  width: 150px;
+  height: 50px;
+  font-size: 2em;
+  -webkit-tap-highlight-color: transparent;
+
+  @include above_breakpoint(m) {
+    width: 180px;
+    height: 60px;
+  }
+
+  @include above_breakpoint(xl) {
+    width: 240px;
+    height: 80px;
+    font-size: 1.5em;
+  }
+
+  &:hover {
+    background-color: $secondary;
+    color: $primary;
+    box-shadow: -0.1rem 0.1rem 0.2rem lighten($secondary, 2%);
+  }
+}
