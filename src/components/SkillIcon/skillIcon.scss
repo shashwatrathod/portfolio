@@ -1,0 +1,16 @@
+@import "../../mixins";
+
+.skills-icon {
+  height: 80px;
+  width: 80px;
+
+  @include above_breakpoint(l) {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.react-custom-tooltip {
+  font-size: 1.5em !important;
+  border-radius: 10px !important;
+}

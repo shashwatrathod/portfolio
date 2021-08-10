@@ -1,0 +1,63 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+#skills {
+  scroll-snap-align: start;
+}
+
+.skills-container {
+  display: grid;
+  place-content: center;
+  padding-inline: 5vw;
+  padding-block: 5vw;
+  font-size: 8px;
+
+  @include above_breakpoint(m) {
+    font-size: 10px;
+  }
+
+  @include above_breakpoint(l) {
+    font-size: 12px;
+  }
+}
+
+.skills-main-grid {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "skills";
+  row-gap: 2rem;
+
+  @include above_breakpoint(l) {
+    row-gap: 4rem;
+  }
+}
+
+.skills-title {
+  font-size: 3.5em;
+  color: $textSecondary;
+  text-align: center;
+}
+
+.skills-subtitle {
+  font-size: 2em;
+  color: $textTertiary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  // Class injectected by 'typewritter-effect'
+  .Typewriter {
+    display: inline-block;
+  }
+}
+
+.skills-content-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}

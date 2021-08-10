@@ -10,21 +10,21 @@ const HeroSection = () => {
   const whatAmIs = [
     "Software Developer",
     "Avid Learner",
+    "Problem Solver",
     "Student",
     "Gamer",
     "Tech Nerd",
-    "Dog Lover",
   ];
   return (
     <>
       <section id="home">
         <div className="hero-container">
           <div className="hero-bg" aria-hidden="true"></div>
-          <div className="container">
-            <div className="main-grid">
-              <div className="info-container">
+          <div className="hero-container-2">
+            <div className="hero-main-grid">
+              <div className="hero-info-container">
                 <Slide top cascade>
-                  <div className="name-container">
+                  <div className="hero-name-container">
                     <div className="filler-text">Hey there! I'm</div>
                     <h1 className="name">Shashwat Rathod</h1>
                   </div>
@@ -42,35 +42,37 @@ const HeroSection = () => {
                   </div>
                 </Slide>
                 <Slide bottom>
-                  <div className="buttons-container">
-                    <PillButton aria-label="email">Get In Touch</PillButton>
-                    <PillButton aria-label="download cv">Dowload CV</PillButton>
+                  <div className="hero-buttons-container">
+                    <PillButton aria-label="scroll">Take a Tour</PillButton>
+                    <PillButton aria-label="contact">Get in Touch</PillButton>
                   </div>
                 </Slide>
               </div>
               <Slide right>
-                <div className="illustration-container" aria-hidden="true">
+                <div className="hero-illustration-container" aria-hidden="true">
                   <TypingIllustration className="illustration" />
                 </div>
               </Slide>
             </div>
             <div className="socials-container">
-              {socials.map((social, index) => (
-                <a
-                  key={social.title}
-                  href={social.link}
-                  className="social-button"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={social.title}
-                  aria-labelledby={social.key}
-                >
-                  {social.icon}
-                  <div className="username" id={social.key}>
-                    {social.username}
-                  </div>
-                </a>
-              ))}
+              <Slide left>
+                {socials.map((social, index) => (
+                  <a
+                    key={social.title}
+                    href={social.link}
+                    className="social-button"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={social.title}
+                    aria-labelledby={social.key}
+                  >
+                    {social.icon}
+                    <div className="username" id={social.key}>
+                      {social.username}
+                    </div>
+                  </a>
+                ))}
+              </Slide>
             </div>
           </div>
         </div>
