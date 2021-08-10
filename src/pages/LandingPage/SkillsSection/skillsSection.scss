@@ -10,14 +10,11 @@
   place-content: center;
   padding-inline: 5vw;
   padding-block: 5vw;
-  font-size: 8px;
+
+  font-size: 0.5rem;
 
   @include above_breakpoint(m) {
-    font-size: 10px;
-  }
-
-  @include above_breakpoint(l) {
-    font-size: 12px;
+    font-size: 0.625rem;
   }
 }
 

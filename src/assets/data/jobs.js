@@ -1,7 +1,28 @@
 import { IoLogoAndroid } from "react-icons/io5";
 import { GiBrain } from "react-icons/gi";
+import { HiOutlineDesktopComputer } from "react-icons/hi";
 
 const jobs = [
+  {
+    jobTitle: "Software Developer Intern",
+    jobSubtitle: "Nirmitee.io",
+    date: "01/2021 - 05/2021",
+    description:
+      "Developed a resume ranker that could parse the resume text, compare those against the given job description and then rank them based on relevance. Developed and deployed AI models that can detect the emotion and orientation of a person's face using video. Helped develop the product's website including an AgoraRTC integration for video call functionality.",
+    icon: <HiOutlineDesktopComputer />,
+    iconStyle: {
+      color: "white",
+      background: "#3877E1",
+    },
+    technologies: [
+      "Python",
+      "React",
+      "TypeScript",
+      "TensorFlow",
+      "Material-UI",
+      "AgoraRTC",
+    ],
+  },
   {
     jobTitle: "AI/ML Analyst Intern",
     jobSubtitle: "Nirmitee.io",

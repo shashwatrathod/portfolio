@@ -9,7 +9,7 @@ import "./myVerticalTimeline.scss";
 const MyVerticalTimeline = ({ job }) => {
   return (
     <>
-      <VerticalTimeline>
+      <VerticalTimeline layout="1-column-left">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{

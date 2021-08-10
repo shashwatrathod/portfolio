@@ -2,7 +2,18 @@
 @import "../../../variables";
 
 #experience {
-  font-size: 8px;
+  scroll-snap-align: start;
+
+  margin-block: 1vh;
+  font-size: 0.5rem;
+
+  @include above_breakpoint(m) {
+    font-size: 0.625rem;
+  }
+
+  @include above_breakpoint(xl) {
+    // font-size: 12px;
+  }
 }
 
 .work-container {
@@ -13,10 +24,22 @@
   display: flex;
   flex-direction: column;
   gap: 5em;
+
+  @include above_breakpoint(xl) {
+    flex-direction: row;
+    padding-block: 0vw;
+    padding-right: 0vw;
+    padding-inline: 2vw;
+  }
 }
 
 .work-title-container {
   align-self: center;
+  text-align: center;
+
+  @include above_breakpoint(xl) {
+    min-width: 25%;
+  }
 }
 
 .work-title {
@@ -24,18 +47,30 @@
   color: $textSecondary;
   position: relative;
 
-  &::before {
-    content: "";
-    width: 20%;
-    height: 5px;
-    background-color: $hint;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    border-radius: 50px;
-  }
+  // &::before {
+  //   content: "";
+  //   width: 20%;
+  //   height: 5px;
+  //   background-color: $hint;
+  //   position: absolute;
+  //   top: 100%;
+  //   left: 0;
+  //   border-radius: 50px;
+  // }
+}
+
+.work-subtitle {
+  font-size: 2em;
+  color: $textTertiary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .work-timeline-container {
-  transform: (translateX(-7%));
+  transform: (translateX(-25px));
+
+  @include above_breakpoint(xl) {
+    transform: (translateX(0px));
+  }
 }

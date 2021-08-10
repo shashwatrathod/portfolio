@@ -8,13 +8,12 @@ const WorkSection = () => {
     <section id="experience">
       <div className="work-container">
         <div className="work-title-container">
-          <span className="work-title">Experience</span>
+          <div className="work-title">Work Experience</div>
         </div>
         <div className="work-timeline-container">
           {jobs.map((job, index) => (
             <MyVerticalTimeline key={index} job={job} />
           ))}
-          {/* <MyVerticalTimeline /> */}
         </div>
       </div>
     </section>
