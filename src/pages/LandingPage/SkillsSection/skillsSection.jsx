@@ -15,7 +15,6 @@ const SkillsSection = () => {
             <div className="skills-title-container">
               <Slide up>
                 <div className="skills-title">Technologies</div>
-
                 <div className="skills-subtitle">
                   <span>I'm </span>
                   <Typewriter

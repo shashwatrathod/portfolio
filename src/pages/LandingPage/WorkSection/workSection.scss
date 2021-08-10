@@ -1,0 +1,41 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+#experience {
+  font-size: 8px;
+}
+
+.work-container {
+  background: $bgSecondary;
+  border-radius: 14em 0 14em 0;
+  padding-right: 5vw;
+  padding-block: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.work-title-container {
+  align-self: center;
+}
+
+.work-title {
+  font-size: 3.5em;
+  color: $textSecondary;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 20%;
+    height: 5px;
+    background-color: $hint;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 50px;
+  }
+}
+
+.work-timeline-container {
+  transform: (translateX(-7%));
+}
