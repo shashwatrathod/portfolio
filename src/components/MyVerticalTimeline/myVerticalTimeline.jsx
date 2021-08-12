@@ -6,7 +6,6 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import TechChip from "../TechChip/techChip";
 import "./myVerticalTimeline.scss";
-import JSIcon from "../../assets/imgs/js-icon.png";
 
 const MyVerticalTimeline = ({ job }) => {
   return (
