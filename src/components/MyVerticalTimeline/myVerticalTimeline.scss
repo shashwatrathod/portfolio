@@ -22,25 +22,22 @@
   }
 
   p {
-    font-size: 1.8em;
+    font-size: 1em !important;
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 2em;
     color: $textPrimary;
+
+    span {
+      font-size: 1.8em;
+      text-align: justify;
+    }
 
     .vertical-timeline-tech-container {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.5em;
-
-      .vertical-timeline-tech {
-        border-radius: 20px;
-        border: 1px solid $primary;
-        padding-inline: 1em;
-        padding-block: 0.5em;
-        font-size: 0.9em;
-      }
     }
   }
 }

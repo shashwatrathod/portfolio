@@ -1,0 +1,46 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+#projects {
+  margin-block: 2rem;
+}
+
+.projects-container {
+  padding-inline: 5vw;
+  font-size: 0.5rem;
+
+  @include above_breakpoint(m) {
+    font-size: 0.625rem;
+  }
+
+  & > * + * {
+    margin-top: 2rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+
+  gap: 2rem;
+
+  @include above_breakpoint(l) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  @include above_breakpoint(xxl) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.projects-title-container {
+  text-align: center;
+}
+
+.projects-title {
+  @include title_text;
+}
+
+.projects-subtitle {
+  @include subtitle_text;
+}

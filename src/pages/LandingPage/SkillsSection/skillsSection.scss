@@ -31,17 +31,13 @@
 }
 
 .skills-title {
-  font-size: 3.5em;
-  color: $textSecondary;
+  @include title_text;
   text-align: center;
 }
 
 .skills-subtitle {
-  font-size: 2em;
-  color: $textTertiary;
+  @include subtitle_text;
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
 
   // Class injectected by 'typewritter-effect'
   .Typewriter {

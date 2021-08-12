@@ -5,3 +5,15 @@
     @content;
   }
 }
+
+@mixin title_text {
+  font-size: 3.5em;
+  color: $textSecondary;
+}
+
+@mixin subtitle_text {
+  font-size: 2em;
+  color: $textTertiary;
+  text-transform: uppercase;
+  font-weight: 600;
+}

@@ -10,10 +10,6 @@
   @include above_breakpoint(m) {
     font-size: 0.625rem;
   }
-
-  @include above_breakpoint(xl) {
-    // font-size: 12px;
-  }
 }
 
 .work-container {
@@ -43,8 +39,7 @@
 }
 
 .work-title {
-  font-size: 3.5em;
-  color: $textSecondary;
+  @include title_text;
   position: relative;
 
   // &::before {
@@ -60,11 +55,7 @@
 }
 
 .work-subtitle {
-  font-size: 2em;
-  color: $textTertiary;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
+  @include subtitle_text;
 }
 
 .work-timeline-container {

@@ -1,12 +1,13 @@
-$bgPrimary: #f4f4f4;
-$bgSecondary: #d3ece8;
-$primary: #b6dbd3;
-$secondary: #0b3e4c;
-$textPrimary: #336975;
-$textSecondary: #0b3e4c;
-$textTertiary: #4ca685;
-$hint: #e0657b;
+$bgPrimary: hsl(0, 0%, 96%);
+$bgSecondary: hsl(170, 40%, 88%);
+$primary: hsl(167, 34%, 79%);
+$secondary: hsl(193, 75%, 17%);
+$textPrimary: hsl(191, 39%, 33%);
+$textSecondary: hsl(193, 75%, 17%);
+$textTertiary: hsl(158, 37%, 47%);
+$hint: hsl(349, 66%, 64%);
 $breakpoints: (
+  xxl: 1400px,
   xl: 1200px,
   l: 992px,
   m: 768px,

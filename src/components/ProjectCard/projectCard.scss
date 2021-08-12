@@ -1,0 +1,85 @@
+@import "../../mixins";
+@import "../../variables";
+
+.project {
+  background: $bgPrimary;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 0 5px rgba(#212121, 0.25);
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(#212121, 0.25);
+  }
+}
+
+.project-thumbnail {
+  width: 100%;
+}
+
+.project-info-container {
+  margin: 1rem;
+
+  & > * + * {
+    margin-top: 1em;
+  }
+
+  .project-description {
+    color: $textPrimary;
+    font-size: 1.6em;
+    text-align: justify;
+  }
+}
+
+hr {
+  border-top: 1px solid rgba(#2f2f2f, 0.25);
+}
+
+.project-info-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "title title links"
+    "tech tech tech";
+  grid-row-gap: 0.5rem;
+
+  .project-title {
+    grid-area: title;
+    font-size: 2.5em;
+    color: $textSecondary;
+    font-weight: 400;
+  }
+
+  .project-tech-chips-container {
+    grid-area: tech;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+
+  .project-links-container {
+    grid-area: links;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+
+    .project-link {
+      font-size: 2.8em;
+      display: grid;
+      place-content: center;
+      text-decoration: none;
+
+      color: $secondary;
+
+      border-radius: 50%;
+
+      &:hover {
+        color: darken($secondary, 20);
+      }
+    }
+  }
+}

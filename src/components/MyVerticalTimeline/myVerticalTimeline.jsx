@@ -4,7 +4,9 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import TechChip from "../TechChip/techChip";
 import "./myVerticalTimeline.scss";
+import JSIcon from "../../assets/imgs/js-icon.png";
 
 const MyVerticalTimeline = ({ job }) => {
   return (
@@ -20,14 +22,10 @@ const MyVerticalTimeline = ({ job }) => {
           contentArrowStyle={{
             borderRight: "10px solid  #f4f4f4",
             color: "#f4f4f4",
-            // top: "50%",
-            // transform: "translateY(-50%)",
           }}
           date={job.date}
           iconStyle={{
             ...job.iconStyle,
-            // top: "50%",
-            // transform: "translatey(-50%)",
           }}
           icon={job.icon}
         >
@@ -39,9 +37,7 @@ const MyVerticalTimeline = ({ job }) => {
             <span>{job.description}</span>
             <div className="vertical-timeline-tech-container">
               {job.technologies.map((tech, index) => (
-                <div className="vertical-timeline-tech" key={index}>
-                  {tech}
-                </div>
+                <TechChip title={tech} />
               ))}
             </div>
           </p>

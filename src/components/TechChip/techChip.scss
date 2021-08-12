@@ -1,0 +1,23 @@
+@import "../../mixins";
+@import "../../variables";
+
+.tech-chip {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  border-radius: 20px;
+  border: 1px solid $primary;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  align-items: center;
+
+  &-img {
+    height: 2.2em;
+    width: 2.2em;
+  }
+
+  &-text {
+    color: $textPrimary;
+    font-size: 1.3em;
+  }
+}
