@@ -1,6 +1,7 @@
 import SpotifyStatsThumbnail from "../../assets/imgs/spotify-stats-thumb.png";
 import ConwayThumbnail from "../../assets/imgs/conway-thumb.png";
 import BalleyThumbnail from "../../assets/imgs/balley-thumb.png";
+import PriceTrackerThumbnail from "../../assets/imgs/price-tracker-thumb.png";
 import ReactIcon from "../../assets/imgs/react-icon.png";
 import MUIcon from "../../assets/imgs/materialui-icon.png";
 import SpotifyIcon from "../../assets/imgs/spotify-icon.png";
@@ -9,6 +10,7 @@ import CSSIcon from "../../assets/imgs/css-icon.png";
 import JSIcon from "../../assets/imgs/js-icon.png";
 import CSIcon from "../../assets/imgs/c#-icon.png";
 import UnityIcon from "../../assets/imgs/unity-icon.png";
+import UWPIcon from "../../assets/imgs/uwp-icon.png";
 import { FaGithub } from "react-icons/fa";
 import { RiShareBoxFill } from "react-icons/ri";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
@@ -109,6 +111,30 @@ const projects = [
     ],
     description:
       "Balley is a 2D hypercasual infinite-runner type game made using Unity. The goal is to stay alive for as long as possible, gain points by bouncing off the raised platforms and to collect coins and power-ups while you're at it. The game gets progressively difficult as the points increase & also features an in-game store from where players can buy skins and powerups.",
+  },
+  {
+    title: "Amazon Price Tracker",
+    thumbnailSrc: PriceTrackerThumbnail,
+    technologies: [
+      {
+        icon: UWPIcon,
+        title: "Universal Windows Platform",
+      },
+      {
+        icon: CSIcon,
+        title: "C#",
+      },
+    ],
+    links: [
+      {
+        icon: <FaGithub />,
+        href: "https://github.com/shashwatrathod/AmazonPriceTracker",
+        alt: "github repository",
+        label: "View on github",
+      },
+    ],
+    description:
+      "Amazon Price Tracker tracks the price of items you like on Amazon for you. It then alerts the user via a notification when the price of an item in the list equals or goes below the reasonable price set by the user. The app by default runs in the background and checks for changes in price of the items every 15 minutes. It achieves this functionality by the means of web scraping.",
   },
 ];
 
