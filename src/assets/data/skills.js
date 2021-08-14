@@ -1,15 +1,12 @@
 import ReactIcon from "../../assets/imgs/react-icon.png";
 import MUIcon from "../../assets/imgs/materialui-icon.png";
-import SpotifyIcon from "../../assets/imgs/spotify-icon.png";
 import HTMLIcon from "../../assets/imgs/html-icon.png";
 import CSSIcon from "../../assets/imgs/css-icon.png";
 import JSIcon from "../../assets/imgs/js-icon.png";
 import CSIcon from "../../assets/imgs/c#-icon.png";
 import UnityIcon from "../../assets/imgs/unity-icon.png";
-import UWPIcon from "../../assets/imgs/uwp-icon.png";
 import PythonIcon from "../../assets/imgs/python-icon.png";
 import TFIcon from "../../assets/imgs/tf-icon.png";
-import OpenCVIcon from "../../assets/imgs/opencv-icon.png";
 
 const skills = [
   {
