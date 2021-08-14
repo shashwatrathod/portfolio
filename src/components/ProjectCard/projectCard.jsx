@@ -1,4 +1,5 @@
 import React from "react";
+import ReactTooltip from "react-tooltip";
 import TechChip from "../TechChip/techChip";
 import "./projectCard.scss";
 
@@ -12,7 +13,12 @@ const ProjectCard = ({
   return (
     <>
       <div className="project">
-        <img src={thumbnailSrc} alt={title} className="project-thumbnail" />
+        <img
+          src={thumbnailSrc}
+          alt={title}
+          className="project-thumbnail"
+          loading="lazy"
+        />
         <div className="project-info-container">
           <div className="project-info-header">
             <div className="project-title">{title}</div>
@@ -27,14 +33,26 @@ const ProjectCard = ({
             </div>
             <div className="project-links-container">
               {links.map((linkObj, index) => (
-                <a
-                  href={linkObj.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="project-link"
-                >
-                  {linkObj.icon}
-                </a>
+                <div key={index}>
+                  <a
+                    href={linkObj.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link"
+                    data-tip
+                    data-for={`project-${title}-action--${index}`}
+                    aria-label={linkObj.alt}
+                  >
+                    {linkObj.icon}
+                  </a>
+                  <ReactTooltip
+                    className="react-custom-tooltip"
+                    id={`project-${title}-action--${index}`}
+                    delayShow={400}
+                  >
+                    <span>{linkObj.label}</span>
+                  </ReactTooltip>
+                </div>
               ))}
             </div>
           </div>

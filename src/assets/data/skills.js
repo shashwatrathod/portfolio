@@ -1,11 +1,24 @@
+import ReactIcon from "../../assets/imgs/react-icon.png";
+import MUIcon from "../../assets/imgs/materialui-icon.png";
+import SpotifyIcon from "../../assets/imgs/spotify-icon.png";
+import HTMLIcon from "../../assets/imgs/html-icon.png";
+import CSSIcon from "../../assets/imgs/css-icon.png";
+import JSIcon from "../../assets/imgs/js-icon.png";
+import CSIcon from "../../assets/imgs/c#-icon.png";
+import UnityIcon from "../../assets/imgs/unity-icon.png";
+import UWPIcon from "../../assets/imgs/uwp-icon.png";
+import PythonIcon from "../../assets/imgs/python-icon.png";
+import TFIcon from "../../assets/imgs/tf-icon.png";
+import OpenCVIcon from "../../assets/imgs/opencv-icon.png";
+
 const skills = [
   {
     title: "Python",
-    src: "https://img.icons8.com/color/144/000000/python--v1.png",
+    src: PythonIcon,
   },
   {
     title: "JavaScript",
-    src: "https://img.icons8.com/color/144/000000/javascript--v1.png",
+    src: JSIcon,
   },
   {
     title: "TypeScript",
@@ -13,15 +26,15 @@ const skills = [
   },
   {
     title: "HTML 5",
-    src: "https://img.icons8.com/color/144/000000/html-5--v1.png",
+    src: HTMLIcon,
   },
   {
     title: "CSS 3",
-    src: "https://img.icons8.com/color/144/000000/css3.png",
+    src: CSSIcon,
   },
   {
     title: "React",
-    src: "https://img.icons8.com/office/160/000000/react.png",
+    src: ReactIcon,
   },
   {
     title: "C",
@@ -29,7 +42,7 @@ const skills = [
   },
   {
     title: "C#",
-    src: "https://img.icons8.com/color/144/000000/c-sharp-logo.png",
+    src: CSIcon,
   },
   {
     title: "Java",
@@ -41,11 +54,11 @@ const skills = [
   },
   {
     title: "TensorFlow",
-    src: "https://img.icons8.com/color/144/000000/tensorflow.png",
+    src: TFIcon,
   },
   {
     title: "Unity",
-    src: "https://img.icons8.com/ios-filled/100/000000/unity.png",
+    src: UnityIcon,
   },
   {
     title: "MongoDB",
@@ -57,7 +70,7 @@ const skills = [
   },
   {
     title: "Material UI",
-    src: "https://img.icons8.com/color/144/000000/material-ui.png",
+    src: MUIcon,
   },
 ];
 

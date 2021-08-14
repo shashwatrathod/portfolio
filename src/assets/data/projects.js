@@ -2,6 +2,7 @@ import SpotifyStatsThumbnail from "../../assets/imgs/spotify-stats-thumb.png";
 import ConwayThumbnail from "../../assets/imgs/conway-thumb.png";
 import BalleyThumbnail from "../../assets/imgs/balley-thumb.png";
 import PriceTrackerThumbnail from "../../assets/imgs/price-tracker-thumb.png";
+import VODSThumbnail from "../../assets/imgs/vods-thumb.png";
 import ReactIcon from "../../assets/imgs/react-icon.png";
 import MUIcon from "../../assets/imgs/materialui-icon.png";
 import SpotifyIcon from "../../assets/imgs/spotify-icon.png";
@@ -11,6 +12,9 @@ import JSIcon from "../../assets/imgs/js-icon.png";
 import CSIcon from "../../assets/imgs/c#-icon.png";
 import UnityIcon from "../../assets/imgs/unity-icon.png";
 import UWPIcon from "../../assets/imgs/uwp-icon.png";
+import PythonIcon from "../../assets/imgs/python-icon.png";
+import TFIcon from "../../assets/imgs/tf-icon.png";
+import OpenCVIcon from "../../assets/imgs/opencv-icon.png";
 import { FaGithub } from "react-icons/fa";
 import { RiShareBoxFill } from "react-icons/ri";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
@@ -135,6 +139,34 @@ const projects = [
     ],
     description:
       "Amazon Price Tracker tracks the price of items you like on Amazon for you. It then alerts the user via a notification when the price of an item in the list equals or goes below the reasonable price set by the user. The app by default runs in the background and checks for changes in price of the items every 15 minutes. It achieves this functionality by the means of web scraping.",
+  },
+  {
+    title: "Visual Occupancy Detection System",
+    thumbnailSrc: VODSThumbnail,
+    technologies: [
+      {
+        icon: PythonIcon,
+        title: "Python",
+      },
+      {
+        icon: TFIcon,
+        title: "TF",
+      },
+      {
+        icon: OpenCVIcon,
+        title: "OpenCV",
+      },
+    ],
+    links: [
+      {
+        icon: <FaGithub />,
+        href: "https://github.com/shashwatrathod/VisualOccupancyDetectionSystem",
+        alt: "github repository",
+        label: "View on github",
+      },
+    ],
+    description:
+      "VODS for smart parking lot management distinguishes between empty and occupied parking spaces in a lot. It uses a CNN model trained on over 120k images. As the roads get more crammed up with cars, the practical implications of a low-cost system that can identify free spaces for the driver are huge in terms of time saved and pollution controlled.",
   },
 ];
 

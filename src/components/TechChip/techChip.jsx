@@ -6,7 +6,12 @@ const TechChip = (props) => {
     <>
       <div className="tech-chip">
         {props.img && (
-          <img src={props.img} alt={props.title} className="tech-chip-img" />
+          <img
+            src={props.img}
+            alt={props.title}
+            className="tech-chip-img"
+            loading="lazy"
+          />
         )}
         <span className="tech-chip-text">{props.title}</span>
       </div>
