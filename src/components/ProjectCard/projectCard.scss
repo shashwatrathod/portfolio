@@ -8,6 +8,8 @@
 
   box-shadow: 0 0 5px rgba(#212121, 0.25);
 
+  transition: all 0.2s ease-in-out;
+
   &:hover {
     box-shadow: 0 0 10px rgba(#212121, 0.25);
   }
