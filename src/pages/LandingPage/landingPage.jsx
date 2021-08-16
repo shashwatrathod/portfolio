@@ -1,4 +1,5 @@
 import React from "react";
+import AboutSection from "./AboutSection/aboutSection";
 import HeroSection from "./HeroSection/heroSection";
 import ProjectsSection from "./ProjectsSection/projectsSetion";
 import SkillsSection from "./SkillsSection/skillsSection";
@@ -11,6 +12,7 @@ const LandingPage = () => {
       <SkillsSection />
       <WorkSection />
       <ProjectsSection />
+      <AboutSection />
     </>
   );
 };

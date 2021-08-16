@@ -1,4 +1,8 @@
-$bgPrimary: hsl(170, 40%, 96%);
+$bgPrimary: hsl(
+  173,
+  40%,
+  95%
+); //* Reflect change in this color inside myVerticalTimeline inline styles as well.
 $bgSecondary: hsl(170, 40%, 88%);
 $primary: hsl(167, 34%, 79%);
 $secondary: hsl(193, 75%, 17%);

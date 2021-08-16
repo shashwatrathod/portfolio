@@ -10,13 +10,13 @@ const MyVerticalTimeline = ({ job }) => {
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
         contentStyle={{
-          background: "#f4f4f4",
+          background: "hsl(173, 40%, 95%)",
           borderRadius: "20px",
           paddingBlock: "20px",
         }}
         contentArrowStyle={{
           borderRight: "10px solid  #f4f4f4",
-          color: "#f4f4f4",
+          color: "hsl(173, 40%, 95%)",
         }}
         date={job.date}
         iconStyle={{

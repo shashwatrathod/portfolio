@@ -1,0 +1,87 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+#about {
+  margin-block: 3rem;
+}
+
+.about-container {
+  padding-inline: 5vw;
+  font-size: 0.5rem;
+
+  @include above_breakpoint(m) {
+    font-size: 0.635rem;
+  }
+}
+
+.about-main-grid {
+  display: grid;
+
+  gap: 3rem;
+
+  @include above_breakpoint(l) {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+}
+
+.about-title-container {
+  @include title_text;
+  text-align: center;
+}
+
+.about-content-container {
+  font-size: 1.8em;
+  color: $textPrimary;
+  position: relative;
+
+  @include above_breakpoint(l) {
+    padding-block: 80px;
+    padding-inline: 80px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../../../assets/svgs/zigzag.svg);
+    width: 33%;
+    height: 1rem;
+    background-repeat: repeat-x;
+
+    @include above_breakpoint(l) {
+      background-image: url(../../../assets/svgs/right-angle.svg);
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &::before {
+    top: -1rem;
+    right: 0;
+
+    @include above_breakpoint(l) {
+      top: auto;
+      bottom: 0px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &::after {
+    bottom: -1rem;
+    left: 0;
+    transform: rotate(180deg);
+
+    @include above_breakpoint(l) {
+      top: 0px;
+      left: 0px;
+      transform: rotate(90deg);
+    }
+  }
+
+  & > p {
+    text-align: justify;
+  }
+}
