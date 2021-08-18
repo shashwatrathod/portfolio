@@ -7,7 +7,9 @@ const AboutSection = () => {
       <section id="about">
         <div className="about-container">
           <div className="about-main-grid">
-            <div className="about-title-container">About Me</div>
+            <div className="about-title-container">
+              <span>About Me</span>
+            </div>
             <div className="about-content-container">
               Shashwat Rathod, {new Date().getFullYear() - 2000}
               <br />

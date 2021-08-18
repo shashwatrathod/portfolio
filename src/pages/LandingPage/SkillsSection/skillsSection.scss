@@ -3,6 +3,20 @@
 
 #skills {
   scroll-snap-align: start;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    height: 125%;
+    width: 100%;
+    content: "";
+    right: 0px;
+    bottom: -10px;
+    background-image: url(../../../assets/svgs/polybg.svg);
+    background-size: cover;
+    z-index: -2;
+    background-position: center;
+  }
 }
 
 .skills-container {

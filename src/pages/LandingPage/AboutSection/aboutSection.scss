@@ -2,7 +2,7 @@
 @import "../../../mixins";
 
 #about {
-  margin-block: 3rem;
+  margin-block: 5vw;
 }
 
 .about-container {
@@ -20,14 +20,31 @@
   gap: 3rem;
 
   @include above_breakpoint(l) {
-    grid-template-columns: 1fr 2fr;
+    // grid-template-columns: 1fr 2fr;
     align-items: center;
   }
 }
 
 .about-title-container {
-  @include title_text;
   text-align: center;
+
+  & > span {
+    @include title_text;
+    position: relative;
+
+    @include above_breakpoint(l) {
+      &::before {
+        position: absolute;
+        content: "";
+        background: $hint;
+        width: 25%;
+        height: 8px;
+        bottom: -5px;
+        left: 0px;
+        border-radius: 20px;
+      }
+    }
+  }
 }
 
 .about-content-container {
