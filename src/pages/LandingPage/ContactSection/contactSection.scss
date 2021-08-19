@@ -132,3 +132,16 @@ $field-font-size: 1.8em;
     }
   }
 }
+
+@include keyframes(spinner) {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-form-spinner {
+  @include animation("spinner 1s infinite ease");
+}

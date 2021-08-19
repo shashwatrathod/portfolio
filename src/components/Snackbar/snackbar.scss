@@ -1,0 +1,52 @@
+@import "../../mixins";
+@import "../../variables";
+
+.snackbar {
+  visibility: hidden;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+}
+
+.snackbar-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.snackbar-error {
+  background-color: #dc3545;
+  color: white;
+}
+
+@include keyframes(fadein) {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeout) {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.snackbar-show {
+  visibility: visible;
+  @include animation("fadein 0.5s, fadeout 0.5s 2.5s");
+}

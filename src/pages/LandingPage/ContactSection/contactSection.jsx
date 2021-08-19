@@ -2,9 +2,15 @@ import React, { useRef, useState } from "react";
 import "./contactSection.scss";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import emailjs from "emailjs-com";
+import { AiOutlineLoading } from "react-icons/ai";
+import Snackbar from "../../../components/Snackbar/snackbar";
 
 const ContactSection = () => {
   const [submitDisabled, setSubmitDisabled] = useState(false);
+  const [showSnackbar, setShowSnackbar] = useState(false);
+  const [snackbarType, setSnackbarType] = useState("success");
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+
   const submitOnClick = (e) => {
     e.preventDefault();
     setSubmitDisabled(true);
@@ -28,14 +34,20 @@ const ContactSection = () => {
         emailRef.current.value = "";
         subjectRef.current.value = "";
         messageRef.current.value = "";
+        setSubmitDisabled(false);
 
-        //Show success snackbar
+        setSnackbarType("success");
+        setSnackbarMessage("Message sent!");
+        setShowSnackbar(true);
       })
       .catch((err) => {
-        // Show error snackbar
+        setSnackbarType("error");
+        setSnackbarMessage(
+          "Sorry, we couldn't send your message. Please try again later."
+        );
+        setShowSnackbar(true);
+        setSubmitDisabled(false);
       });
-
-    setSubmitDisabled(false);
   };
 
   const nameRef = useRef("");
@@ -99,7 +111,11 @@ const ContactSection = () => {
                   className="contact-form-submit-btn"
                   disabled={submitDisabled}
                 >
-                  <HiOutlineArrowNarrowRight />
+                  {submitDisabled ? (
+                    <AiOutlineLoading className="contact-form-spinner" />
+                  ) : (
+                    <HiOutlineArrowNarrowRight />
+                  )}
                   Send
                 </button>
               </form>
@@ -107,6 +123,12 @@ const ContactSection = () => {
           </div>
         </div>
       </section>
+      <Snackbar
+        showSnackbar={showSnackbar}
+        setShowSnackbar={setShowSnackbar}
+        type={snackbarType}
+        message={snackbarMessage}
+      />
     </>
   );
 };
