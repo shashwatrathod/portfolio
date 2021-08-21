@@ -14,9 +14,9 @@ const Snackbar = ({ showSnackbar, setShowSnackbar, type, message }) => {
     <>
       <div
         className={clsx("snackbar", {
-          ["snackbar-success"]: type === "success",
-          ["snackbar-error"]: type === "error",
-          ["snackbar-show"]: showSnackbar,
+          "snackbar-success": type === "success",
+          "snackbar-error": type === "error",
+          "snackbar-show": showSnackbar,
         })}
       >
         {message}

@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <nav className={clsx({ ["nav-scrolled"]: hasScrolledPast })}>
+        <nav className={clsx({ "nav-scrolled": hasScrolledPast })}>
           <div className="nav-container">
             <div className="nav-title">
               <ScrollLink
@@ -45,7 +45,7 @@ const Navbar = () => {
             </div>
             <ul
               className={clsx("nav-menu", {
-                ["nav-menu--expanded"]: menuOpen,
+                "nav-menu--expanded": menuOpen,
               })}
             >
               <li>
@@ -107,7 +107,7 @@ const Navbar = () => {
 
             <div
               className={clsx("hamburger", {
-                ["hamburger-open"]: menuOpen,
+                "hamburger-open": menuOpen,
               })}
               onClick={toggleHamburger}
             >
