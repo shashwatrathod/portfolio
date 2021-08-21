@@ -1,0 +1,11 @@
+@import "../../variables";
+@import "../../mixins";
+
+.footer-container {
+  display: grid;
+  padding-inline: 5vw;
+  padding-block: 2vh;
+  place-content: center;
+  background-color: $primary;
+  color: $textPrimary;
+}

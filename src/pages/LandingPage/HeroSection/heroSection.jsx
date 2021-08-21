@@ -5,6 +5,7 @@ import PillButton from "../../../components/PillButton/pillButton";
 import Slide from "react-reveal/Slide";
 import socials from "../../../assets/data/socials";
 import Typewriter from "typewriter-effect";
+import { Link as ScrollLink } from "react-scroll";
 
 const HeroSection = () => {
   const whatAmIs = [
@@ -43,8 +44,17 @@ const HeroSection = () => {
                 </Slide>
                 <Slide bottom>
                   <div className="hero-buttons-container">
-                    <PillButton aria-label="scroll">Take a Tour</PillButton>
-                    <PillButton aria-label="contact">Get in Touch</PillButton>
+                    <ScrollLink
+                      to="skills"
+                      smooth={true}
+                      exact={true}
+                      spy={true}
+                      offset={-80}
+                    >
+                      <PillButton aria-label="scroll">Take A Tour</PillButton>
+                    </ScrollLink>
+
+                    <PillButton aria-label="contact">Download CV</PillButton>
                   </div>
                 </Slide>
               </div>

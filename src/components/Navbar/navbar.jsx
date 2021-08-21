@@ -49,11 +49,6 @@ const Navbar = () => {
               })}
             >
               <li>
-                <ScrollLink to="home" smooth={true} exact={true} spy={true}>
-                  Home
-                </ScrollLink>
-              </li>
-              <li>
                 <ScrollLink
                   to="skills"
                   smooth={true}
@@ -105,7 +100,7 @@ const Navbar = () => {
                   spy={true}
                   offset={-80}
                 >
-                  Contact
+                  Contact Me
                 </ScrollLink>
               </li>
             </ul>
