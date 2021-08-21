@@ -8,3 +8,25 @@ body {
   background-color: $bgPrimary;
   box-sizing: border-box;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 0 0 10px rgba(#212121, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($color: $secondary, $amount: 5%);
+}
