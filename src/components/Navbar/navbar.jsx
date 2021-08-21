@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import PillButton from "../PillButton/pillButton";
 import "./navbar.scss";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,29 +32,81 @@ const Navbar = () => {
       <header>
         <nav className={clsx({ ["nav-scrolled"]: hasScrolledPast })}>
           <div className="nav-container">
-            <div className="nav-title">ShashwatRathod</div>
+            <div className="nav-title">
+              <ScrollLink
+                to="home"
+                smooth={true}
+                exact={true}
+                spy={true}
+                offset={-80}
+              >
+                ShashwatRathod
+              </ScrollLink>
+            </div>
             <ul
               className={clsx("nav-menu", {
                 ["nav-menu--expanded"]: menuOpen,
               })}
             >
               <li>
-                <a href="#home">Home</a>
+                <ScrollLink to="home" smooth={true} exact={true} spy={true}>
+                  Home
+                </ScrollLink>
               </li>
               <li>
-                <a href="#skills">Skills</a>
+                <ScrollLink
+                  to="skills"
+                  smooth={true}
+                  exact={true}
+                  spy={true}
+                  offset={-80}
+                >
+                  Skills
+                </ScrollLink>
               </li>
               <li>
-                <a href="#work">Work</a>
+                <ScrollLink
+                  to="experience"
+                  smooth={true}
+                  exact={true}
+                  spy={true}
+                  offset={-80}
+                >
+                  Experience
+                </ScrollLink>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <ScrollLink
+                  to="projects"
+                  smooth={true}
+                  exact={true}
+                  spy={true}
+                  offset={-80}
+                >
+                  Projects
+                </ScrollLink>
               </li>
               <li>
-                <a href="#about">About</a>
+                <ScrollLink
+                  to="about"
+                  smooth={true}
+                  exact={true}
+                  spy={true}
+                  offset={-80}
+                >
+                  About
+                </ScrollLink>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  exact={true}
+                  spy={true}
+                  offset={-80}
+                >
+                  Contact
+                </ScrollLink>
               </li>
             </ul>
 

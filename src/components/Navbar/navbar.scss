@@ -39,6 +39,7 @@ nav {
 
 .nav-title {
   font-weight: 600;
+  cursor: pointer;
 }
 
 .nav-menu {
@@ -67,6 +68,10 @@ nav {
     & > li {
       display: none;
     }
+  }
+
+  & > li {
+    cursor: pointer;
   }
 
   & > li > a {
