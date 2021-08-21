@@ -11,6 +11,11 @@ const ContactSection = () => {
   const [snackbarType, setSnackbarType] = useState("success");
   const [snackbarMessage, setSnackbarMessage] = useState("");
 
+  const nameRef = useRef("");
+  const emailRef = useRef("");
+  const subjectRef = useRef("");
+  const messageRef = useRef("");
+
   const submitOnClick = (e) => {
     e.preventDefault();
     setSubmitDisabled(true);
@@ -49,11 +54,6 @@ const ContactSection = () => {
         setSubmitDisabled(false);
       });
   };
-
-  const nameRef = useRef("");
-  const emailRef = useRef("");
-  const subjectRef = useRef("");
-  const messageRef = useRef("");
 
   return (
     <>

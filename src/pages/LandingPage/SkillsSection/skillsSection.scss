@@ -2,7 +2,6 @@
 @import "../../../mixins";
 
 #skills {
-  scroll-snap-align: start;
   position: relative;
 
   &::after {

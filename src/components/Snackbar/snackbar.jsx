@@ -9,7 +9,7 @@ const Snackbar = ({ showSnackbar, setShowSnackbar, type, message }) => {
         setShowSnackbar(false);
       }, 3000);
     }
-  }, [showSnackbar]);
+  }, [showSnackbar, setShowSnackbar]);
   return (
     <>
       <div

@@ -1,0 +1,159 @@
+@use "sass:math";
+@import "../../mixins";
+@import "../../variables";
+
+$textSize: 1.2em;
+
+nav {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  padding-inline: 5vw;
+  padding-block: 1em;
+
+  font-size: 1rem;
+
+  @include above_breakpoint(l) {
+    font-size: 1.125rem;
+  }
+}
+
+.nav-scrolled {
+  background: $bgPrimary;
+  box-shadow: 0px 1px 10px rgba(#212121, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  //   flex-direction: row;
+  width: 100%;
+
+  justify-content: space-between;
+  font-size: $textSize;
+  align-items: center;
+  color: $textSecondary;
+}
+
+.nav-title {
+  font-weight: 600;
+}
+
+.nav-menu {
+  list-style-type: none;
+  gap: 1.5rem;
+  margin-block: 0px;
+
+  display: flex;
+
+  @include below_breakpoint(l) {
+    flex-direction: column;
+    position: absolute;
+    right: 1 * $textSize;
+    top: 3 * $textSize;
+    border-radius: 5px;
+    background-color: $bgPrimary;
+    width: 50%;
+    align-items: center;
+    padding-inline: 0;
+    padding-block: 1em;
+    box-shadow: 0px 1px 10px rgba(#212121, 0.2);
+    @include transition(all 0.3s ease-out);
+    @include transform(scale(0, 0));
+    transform-origin: 100% 0%;
+
+    & > li {
+      display: none;
+    }
+  }
+
+  & > li > a {
+    text-decoration: none;
+    color: $textSecondary;
+
+    &:hover {
+      color: lighten($color: $textSecondary, $amount: 10%);
+    }
+  }
+}
+
+.nav-menu--expanded {
+  @include transform(scale(1, 1));
+
+  & > li {
+    display: list-item;
+  }
+}
+
+.download-btn {
+  background-color: $primary;
+  color: $textPrimary;
+  cursor: pointer;
+  padding: 0.7em 1em;
+  border: 0px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1em;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Related to menu button and animation
+
+.hamburger {
+  height: $textSize;
+  cursor: pointer;
+  width: 1.5em;
+  position: relative;
+  @include transition(all 0.5s ease-in-out);
+  -webkit-tap-highlight-color: transparent;
+
+  @include above_breakpoint(l) {
+    display: none;
+  }
+
+  & span {
+    width: 1.5em;
+    height: math.div($textSize, 5);
+    background-color: $textSecondary;
+    border-radius: 5px;
+    position: absolute;
+    @include transition(all 0.3s ease-in-out);
+    left: 0;
+  }
+
+  @for $i from 1 through 3 {
+    & span:nth-child(#{$i}) {
+      top: ($i - 1) *
+        math.div($textSize, 5) +
+        ($i - 1) *
+        math.div($textSize, 5);
+    }
+  }
+  & span:nth-child(4) {
+    top: 2 * math.div($textSize, 5);
+  }
+}
+
+.hamburger-open {
+  & span:nth-child(1) {
+    top: 2 * math.div($textSize, 5);
+    width: 0%;
+    left: 50%;
+  }
+
+  & span:nth-child(2) {
+    @include transform(rotate(45deg));
+  }
+
+  & span:nth-child(3) {
+    top: 2 * math.div($textSize, 5);
+    width: 0%;
+    left: 50%;
+  }
+
+  & span:nth-child(4) {
+    @include transform(rotate(-45deg));
+  }
+}
