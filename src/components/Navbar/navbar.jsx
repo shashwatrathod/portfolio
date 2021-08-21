@@ -1,18 +1,36 @@
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PillButton from "../PillButton/pillButton";
 import "./navbar.scss";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasScrolledPast, setHasScrolledPast] = useState(false);
+
+  const checkScroll = () => {
+    if (window.scrollY >= 80) {
+      setHasScrolledPast(true);
+    } else {
+      setHasScrolledPast(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
 
   const toggleHamburger = () => {
     setMenuOpen((prevState) => !prevState);
   };
+
   return (
     <>
       <header>
-        <nav>
+        <nav className={clsx({ ["nav-scrolled"]: hasScrolledPast })}>
           <div className="nav-container">
             <div className="nav-title">ShashwatRathod</div>
             <ul

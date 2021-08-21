@@ -13,7 +13,7 @@ nav {
   z-index: 10;
   padding-inline: 5vw;
   padding-block: 1em;
-
+  @include transition(all 0.2s ease-in-out);
   font-size: 1rem;
 
   @include above_breakpoint(l) {
