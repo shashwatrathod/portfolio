@@ -32,7 +32,7 @@ const MyVerticalTimeline = ({ job }) => {
           <span>{job.description}</span>
           <div className="vertical-timeline-tech-container">
             {job.technologies.map((tech, index) => (
-              <TechChip title={tech} />
+              <TechChip title={tech} key={index} />
             ))}
           </div>
         </p>

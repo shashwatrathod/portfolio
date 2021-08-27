@@ -2,6 +2,7 @@ import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link as ScrollLink } from "react-scroll";
+import NavItem from "./NavItem/navItem";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,61 +49,11 @@ const Navbar = () => {
                 "nav-menu--expanded": menuOpen,
               })}
             >
-              <li>
-                <ScrollLink
-                  to="skills"
-                  smooth={true}
-                  exact={true}
-                  spy={true}
-                  offset={-80}
-                >
-                  Skills
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="experience"
-                  smooth={true}
-                  exact={true}
-                  spy={true}
-                  offset={-80}
-                >
-                  Experience
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="projects"
-                  smooth={true}
-                  exact={true}
-                  spy={true}
-                  offset={-80}
-                >
-                  Projects
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="about"
-                  smooth={true}
-                  exact={true}
-                  spy={true}
-                  offset={-80}
-                >
-                  About
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="contact"
-                  smooth={true}
-                  exact={true}
-                  spy={true}
-                  offset={-80}
-                >
-                  Contact Me
-                </ScrollLink>
-              </li>
+              <NavItem itemName="Skills" itemLink="skills" />
+              <NavItem itemName="Experience" itemLink="experience" />
+              <NavItem itemName="Projects" itemLink="projects" />
+              <NavItem itemName="About" itemLink="about" />
+              <NavItem itemName="Contact Me" itemLink="contact" />
             </ul>
 
             <div

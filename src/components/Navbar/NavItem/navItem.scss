@@ -1,0 +1,15 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+li {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $textSecondary;
+
+  &:hover {
+    color: lighten($color: $textSecondary, $amount: 10%);
+  }
+}

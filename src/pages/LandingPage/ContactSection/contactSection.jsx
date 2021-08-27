@@ -4,6 +4,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import emailjs from "emailjs-com";
 import { AiOutlineLoading } from "react-icons/ai";
 import Snackbar from "../../../components/Snackbar/snackbar";
+import Slide from "react-reveal/Slide";
 
 const ContactSection = () => {
   const [submitDisabled, setSubmitDisabled] = useState(false);
@@ -61,8 +62,10 @@ const ContactSection = () => {
         <div className="contact-container">
           <div className="contact-main-grid">
             <div className="contact-title-container">
-              <div className="contact-title">Say Hello!</div>
-              <div className="contact-subtitle">contact me</div>
+              <Slide up>
+                <div className="contact-title">Say Hello!</div>
+                <div className="contact-subtitle">contact me</div>
+              </Slide>
             </div>
             <div className="contact-form-container">
               <form className="contact-form" onSubmit={submitOnClick}>
@@ -70,7 +73,7 @@ const ContactSection = () => {
                   type="text"
                   id="name-field"
                   name="name"
-                  autocomplete="name"
+                  autoComplete="name"
                   placeholder="Name*"
                   className="contact-form-field"
                   aria-label="Name"
@@ -81,7 +84,7 @@ const ContactSection = () => {
                   type="email"
                   id="email-field"
                   name="email"
-                  autocomplete="email"
+                  autoComplete="email"
                   placeholder="Email*"
                   className="contact-form-field"
                   aria-label="email"

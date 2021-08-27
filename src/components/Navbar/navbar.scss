@@ -13,6 +13,7 @@ nav {
   z-index: 10;
   padding-inline: 5vw;
   padding-block: 1em;
+
   @include transition(all 0.2s ease-in-out);
   font-size: 1rem;
 
@@ -46,6 +47,7 @@ nav {
   list-style-type: none;
   gap: 2rem;
   margin-block: 0px;
+  align-items: center;
 
   display: flex;
 
@@ -70,18 +72,18 @@ nav {
     }
   }
 
-  & > li {
-    cursor: pointer;
-  }
+  // & > li {
+  //   cursor: pointer;
+  // }
 
-  & > li > a {
-    text-decoration: none;
-    color: $textSecondary;
+  // & > li > a {
+  //   text-decoration: none;
+  //   color: $textSecondary;
 
-    &:hover {
-      color: lighten($color: $textSecondary, $amount: 10%);
-    }
-  }
+  //   &:hover {
+  //     color: lighten($color: $textSecondary, $amount: 10%);
+  //   }
+  // }
 }
 
 .nav-menu--expanded {
