@@ -3,6 +3,7 @@ import ConwayThumbnail from "../../assets/imgs/conway-thumb.png";
 import BalleyThumbnail from "../../assets/imgs/balley-thumb.png";
 import PriceTrackerThumbnail from "../../assets/imgs/price-tracker-thumb.png";
 import VODSThumbnail from "../../assets/imgs/vods-thumb.png";
+import PortfolioThumbnail from "../../assets/imgs/portfolio-thumb.png";
 import ReactIcon from "../../assets/imgs/react-icon.png";
 import MUIcon from "../../assets/imgs/materialui-icon.png";
 import SpotifyIcon from "../../assets/imgs/spotify-icon.png";
@@ -167,6 +168,44 @@ const projects = [
     ],
     description:
       "VODS for smart parking lot management distinguishes between empty and occupied parking spaces in a lot. It uses a CNN model trained on over 120k images. As the roads get more crammed up with cars, the practical implications of a low-cost system that can identify free spaces for the driver are huge in terms of time saved and pollution controlled.",
+  },
+  {
+    title: "Porfolio",
+    thumbnailSrc: PortfolioThumbnail,
+    technologies: [
+      {
+        icon: ReactIcon,
+        title: "React",
+      },
+      {
+        icon: JSIcon,
+        title: "JavaScript",
+      },
+      {
+        icon: HTMLIcon,
+        title: "HTML",
+      },
+      {
+        icon: CSSIcon,
+        title: "CSS",
+      },
+    ],
+    links: [
+      {
+        icon: <FaGithub />,
+        href: "https://github.com/shashwatrathod/portfolio",
+        alt: "github repository",
+        label: "View on github",
+      },
+      {
+        icon: <RiShareBoxFill />,
+        href: "https://shashwatrathod.netlify.app/",
+        alt: "website",
+        label: "Visit the website",
+      },
+    ],
+    description:
+      "The portfolio is designed and developed from scratch taking some inspiration from designs on Dribble. The website is developed using ReactJS which allows for quick, efficient and consistent UI changes across the board. Designed in Figma, the website features a modern monochromatic design with an intuitive UX. ",
   },
 ];
 

@@ -1,0 +1,33 @@
+@import "../../variables";
+@import "../../mixins";
+
+.scroll-button {
+  background-color: $primary;
+  display: flex;
+  //   display: flex;
+  visibility: hidden;
+
+  opacity: 0;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  font-size: 2.75rem;
+  padding: 0.5rem;
+  z-index: 10;
+  box-shadow: 0px 1px 10px rgba(#212121, 0.3);
+  border: 0px;
+  cursor: pointer;
+  color: $textPrimary;
+
+  @include transition("background-color, opacity 0.3s ease-in-out");
+
+  &:hover {
+    background-color: darken($primary, 5%);
+  }
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
