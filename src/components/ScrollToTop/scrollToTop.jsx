@@ -21,8 +21,6 @@ const ScrollToTop = () => {
       }
 
       let tempScroll = st <= 0 ? 0 : st;
-      console.log(`CurrScroll: ${st <= 0 ? 0 : st}`);
-      console.log(`PrevScroll: ${prevScroll}`);
       prevScroll = tempScroll;
     };
 
