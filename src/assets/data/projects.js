@@ -7,6 +7,7 @@ import PortfolioThumbnail from "../../assets/imgs/portfolio-thumb.png";
 import ReactIcon from "../../assets/imgs/react-icon.png";
 import MUIcon from "../../assets/imgs/materialui-icon.png";
 import SpotifyIcon from "../../assets/imgs/spotify-icon.png";
+import SassIcon from "../../assets/imgs/sass-icon.png";
 import HTMLIcon from "../../assets/imgs/html-icon.png";
 import CSSIcon from "../../assets/imgs/css-icon.png";
 import JSIcon from "../../assets/imgs/js-icon.png";
@@ -176,6 +177,10 @@ const projects = [
       {
         icon: ReactIcon,
         title: "React",
+      },
+      {
+        icon: SassIcon,
+        title: "Sass",
       },
       {
         icon: JSIcon,

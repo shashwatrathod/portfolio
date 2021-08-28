@@ -1,4 +1,5 @@
 import ReactIcon from "../../assets/imgs/react-icon.png";
+import SassIcon from "../../assets/imgs/sass-icon.png";
 import MUIcon from "../../assets/imgs/materialui-icon.png";
 import HTMLIcon from "../../assets/imgs/html-icon.png";
 import CSSIcon from "../../assets/imgs/css-icon.png";
@@ -63,7 +64,7 @@ const skills = [
   },
   {
     title: "Sass",
-    src: "https://img.icons8.com/color/144/000000/sass-avatar.png",
+    src: SassIcon,
   },
   {
     title: "Material UI",
