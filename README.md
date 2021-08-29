@@ -20,8 +20,8 @@ When I'm not coding, I spend my time playing CS:GO and watching documentries abo
 
 ## 🤝 Connect with me
 
-[<img src="./images/linkedin.svg" width="24" title="LinkedIN" style="margin:20px">](https://www.linkedin.com/in/shashwat-rathod/) [<img src="./images/gmail.svg" width="24" title="Email" style="margin:20px">](mailto:shashwatrathod22@gmail.com) [<img src="./images/github.svg" width="24" title="Github" style="margin:20px">](github.com/shashwatrathod)
+[<img src="./images/linkedin.svg" width="48" title="LinkedIN" style="margin:20px">](https://www.linkedin.com/in/shashwat-rathod/) [<img src="./images/gmail.svg" width="48" title="Email" style="margin:20px">](mailto:shashwatrathod22@gmail.com) [<img src="./images/github.svg" width="48" title="Github" style="margin:20px">](github.com/shashwatrathod)
 
 ## 🤖 Technologies Used
 
-<img src="./src/assets/imgs/react-icon.png" width="24" title="ReactJS" style="margin:20px"> <img src="./src/assets/imgs/sass-icon.png" width="24" title="Sass" style="margin:20px"> <img src="./src/assets/imgs/js-icon.png" width="24" title="JavaScript" style="margin:20px"> <img src="./src/assets/imgs/html-icon.png" width="24" title="HTML" style="margin:20px">
+<img src="./src/assets/imgs/react-icon.png" width="48" title="ReactJS" style="margin:20px"> <img src="./src/assets/imgs/sass-icon.png" width="48" title="Sass" style="margin:20px"> <img src="./src/assets/imgs/js-icon.png" width="48" title="JavaScript" style="margin:20px"> <img src="./src/assets/imgs/html-icon.png" width="48" title="HTML" style="margin:20px">
