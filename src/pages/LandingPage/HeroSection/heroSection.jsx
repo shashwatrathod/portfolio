@@ -54,9 +54,15 @@ const HeroSection = () => {
                       <PillButton aria-label="scroll">Take A Tour</PillButton>
                     </ScrollLink>
 
-                    <a href="/ShashwatResume.pdf" download>
-                      <PillButton aria-label="contact">Resume</PillButton>
-                    </a>
+                    <ScrollLink
+                      to="contact"
+                      smooth={true}
+                      exact={true}
+                      spy={true}
+                      offset={-80}
+                    >
+                      <PillButton aria-label="contact">Get in Touch</PillButton>
+                    </ScrollLink>
                   </div>
                 </Slide>
               </div>
