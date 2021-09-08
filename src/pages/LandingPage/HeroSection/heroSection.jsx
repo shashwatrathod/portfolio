@@ -54,7 +54,9 @@ const HeroSection = () => {
                       <PillButton aria-label="scroll">Take A Tour</PillButton>
                     </ScrollLink>
 
-                    <PillButton aria-label="contact">Download CV</PillButton>
+                    <a href="/ShashwatResume.pdf" download>
+                      <PillButton aria-label="contact">Resume</PillButton>
+                    </a>
                   </div>
                 </Slide>
               </div>
