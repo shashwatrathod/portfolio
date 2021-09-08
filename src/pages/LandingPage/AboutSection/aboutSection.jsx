@@ -16,6 +16,7 @@ const AboutSection = () => {
 
             <div className="about-content-container">
               {`Shashwat Rathod, ${new Date().getFullYear() - 2000}`}
+              <br />
               Boston, USA
               <p>
                 I am a <strong>software development</strong> enthusiast who is
