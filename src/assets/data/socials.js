@@ -22,12 +22,6 @@ const socials = [
     username: "shashwatrathod22@gmail.com",
     link: "mailto:shashwatrathod22@gmail.com",
   },
-  {
-    title: "Instagram",
-    icon: <InstagramIcon className="social-icon" />,
-    username: "shashwatrathod_",
-    link: "https://www.instagram.com/shashwatrathod_/",
-  },
 ];
 
 export default socials;
