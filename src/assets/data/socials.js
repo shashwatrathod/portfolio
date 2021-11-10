@@ -13,8 +13,8 @@ const socials = [
   {
     title: "LinkedIN",
     icon: <LinkedinIcon className="social-icon" />,
-    username: "shashwat-rathod-a06727173",
-    link: "https://www.linkedin.com/in/shashwat-rathod-a06727173/",
+    username: "shashwat-rathod",
+    link: "https://www.linkedin.com/in/shashwat-rathod/",
   },
   {
     title: "Mail",
