@@ -52,7 +52,7 @@ nav {
 
 .blinking-cursor {
   height: $textSize;
-  width: $textSize / 2;
+  width: math.div($textSize, 2);
   align-self: center;
   display: inline-block;
   background-color: $textSecondary;

@@ -1,4 +1,3 @@
-import { ReactComponent as InstagramIcon } from "../svgs/Instagram_white.svg";
 import { ReactComponent as GithubIcon } from "../svgs/Github_white.svg";
 import { ReactComponent as MailIcon } from "../svgs/Mail_white.svg";
 import { ReactComponent as LinkedinIcon } from "../svgs/LinkedIN_white.svg";
