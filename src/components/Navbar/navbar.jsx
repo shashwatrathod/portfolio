@@ -40,8 +40,9 @@ const Navbar = () => {
                 exact={true}
                 spy={true}
                 offset={-80}
+                className="nav-scroll-link"
               >
-                ShashwatRathod
+                ~$ ./rathod.sh <span className="blinking-cursor"></span>
               </ScrollLink>
             </div>
             <ul
