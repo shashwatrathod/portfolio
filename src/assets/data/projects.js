@@ -86,7 +86,7 @@ const projects = [
       },
       {
         icon: <RiShareBoxFill />,
-        href: "https://conways-game-of-life-by-shash.herokuapp.com/",
+        href: "https://conways-gol-shash.netlify.app/",
         alt: "website",
         label: "Visit the website",
       },
