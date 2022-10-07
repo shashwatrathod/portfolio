@@ -1,13 +1,11 @@
 import ReactIcon from "../../assets/imgs/react-icon.png";
-import SassIcon from "../../assets/imgs/sass-icon.png";
-import MUIcon from "../../assets/imgs/materialui-icon.png";
 import HTMLIcon from "../../assets/imgs/html-icon.png";
 import CSSIcon from "../../assets/imgs/css-icon.png";
 import JSIcon from "../../assets/imgs/js-icon.png";
 import CSIcon from "../../assets/imgs/c#-icon.png";
 import UnityIcon from "../../assets/imgs/unity-icon.png";
 import PythonIcon from "../../assets/imgs/python-icon.png";
-import TFIcon from "../../assets/imgs/tf-icon.png";
+import TSIcon from "../imgs/typescript-logo.png";
 
 const skills = [
   {
@@ -20,7 +18,23 @@ const skills = [
   },
   {
     title: "TypeScript",
-    src: "https://img.icons8.com/color/144/000000/typescript.png",
+    src: TSIcon,
+  },
+  {
+    title: "Java",
+    src: "https://cdn-icons-png.flaticon.com/512/226/226777.png",
+  },
+  {
+    title: "React",
+    src: ReactIcon,
+  },
+  {
+    title: "NodeJS",
+    src: "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png",
+  },
+  {
+    title: "ExpressJS",
+    src: "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png",
   },
   {
     title: "HTML 5",
@@ -31,28 +45,8 @@ const skills = [
     src: CSSIcon,
   },
   {
-    title: "React",
-    src: ReactIcon,
-  },
-  {
-    title: "C",
-    src: "https://img.icons8.com/color/144/000000/c-programming.png",
-  },
-  {
     title: "C#",
     src: CSIcon,
-  },
-  {
-    title: "Java",
-    src: "https://img.icons8.com/color/144/000000/java-coffee-cup-logo--v1.png",
-  },
-  {
-    title: "Android",
-    src: "https://img.icons8.com/fluency/144/000000/android-os.png",
-  },
-  {
-    title: "TensorFlow",
-    src: TFIcon,
   },
   {
     title: "Unity",
@@ -60,15 +54,7 @@ const skills = [
   },
   {
     title: "MongoDB",
-    src: "https://img.icons8.com/color/144/000000/mongodb.png",
-  },
-  {
-    title: "Sass",
-    src: SassIcon,
-  },
-  {
-    title: "Material UI",
-    src: MUIcon,
+    src: "https://cdn.iconscout.com/icon/free/png-256/mongodb-5-1175140.png",
   },
 ];
 
