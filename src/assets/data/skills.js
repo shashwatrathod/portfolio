@@ -6,6 +6,7 @@ import CSIcon from "../../assets/imgs/c#-icon.png";
 import UnityIcon from "../../assets/imgs/unity-icon.png";
 import PythonIcon from "../../assets/imgs/python-icon.png";
 import TSIcon from "../imgs/typescript-logo.png";
+import ExpressIcon from "../imgs/express-logo.png";
 
 const skills = [
   {
@@ -34,7 +35,7 @@ const skills = [
   },
   {
     title: "ExpressJS",
-    src: "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png",
+    src: ExpressIcon,
   },
   {
     title: "HTML 5",
