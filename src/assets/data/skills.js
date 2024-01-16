@@ -7,12 +7,9 @@ import UnityIcon from "../../assets/imgs/unity-icon.png";
 import PythonIcon from "../../assets/imgs/python-icon.png";
 import TSIcon from "../imgs/typescript-logo.png";
 import ExpressIcon from "../imgs/express-logo.png";
+import SpringBootIcon from "../imgs/spring-boot-logo.png";
 
 const skills = [
-  {
-    title: "Python",
-    src: PythonIcon,
-  },
   {
     title: "JavaScript",
     src: JSIcon,
@@ -24,6 +21,14 @@ const skills = [
   {
     title: "Java",
     src: "https://cdn-icons-png.flaticon.com/512/226/226777.png",
+  },
+  {
+    title: "SpringBoot",
+    src: SpringBootIcon,
+  },
+  {
+    title: "Python",
+    src: PythonIcon,
   },
   {
     title: "React",

@@ -6,13 +6,13 @@ const socials = [
   {
     title: "Github",
     icon: <GithubIcon className="social-icon" />,
-    username: "shashwatrathod",
+    username: "/shashwatrathod",
     link: "https://github.com/shashwatrathod",
   },
   {
     title: "LinkedIN",
     icon: <LinkedinIcon className="social-icon" />,
-    username: "shashwat-rathod",
+    username: "/shashwat-rathod",
     link: "https://www.linkedin.com/in/shashwat-rathod/",
   },
   {
