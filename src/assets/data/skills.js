@@ -5,9 +5,9 @@ import JSIcon from "../../assets/imgs/js-icon.png";
 import CSIcon from "../../assets/imgs/c#-icon.png";
 import UnityIcon from "../../assets/imgs/unity-icon.png";
 import PythonIcon from "../../assets/imgs/python-icon.png";
-import TSIcon from "../imgs/typescript-logo.png";
-import ExpressIcon from "../imgs/express-logo.png";
-import SpringBootIcon from "../imgs/spring-boot-logo.png";
+import TSIcon from "../../assets/imgs/typescript-logo.png";
+import ExpressIcon from "../../assets/imgs/express-logo.png";
+import SpringBootIcon from "../../assets/imgs/spring-boot-logo.png";
 
 const skills = [
   {
