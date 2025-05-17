@@ -1,6 +1,4 @@
 import { IoLogoAndroid } from "react-icons/io5";
-import { GiBrain } from "react-icons/gi";
-import { HiOutlineDesktopComputer } from "react-icons/hi";
 import nylLogo from "../imgs/nyl.png";
 import khouryLogo from "../imgs/khoury.jpg";
 import nirmiteeLogo from "../imgs/nirmitee.png";
