@@ -1,22 +1,3 @@
-import SpotifyStatsThumbnail from "../../assets/imgs/spotify-stats-thumb.png";
-import ConwayThumbnail from "../../assets/imgs/conway-thumb.png";
-import BalleyThumbnail from "../../assets/imgs/balley-thumb.png";
-import PriceTrackerThumbnail from "../../assets/imgs/price-tracker-thumb.png";
-import VODSThumbnail from "../../assets/imgs/vods-thumb.png";
-import PortfolioThumbnail from "../../assets/imgs/portfolio-thumb.png";
-import ReactIcon from "../../assets/imgs/react-icon.png";
-import MUIcon from "../../assets/imgs/materialui-icon.png";
-import SpotifyIcon from "../../assets/imgs/spotify-icon.png";
-import SassIcon from "../../assets/imgs/sass-icon.png";
-import HTMLIcon from "../../assets/imgs/html-icon.png";
-import CSSIcon from "../../assets/imgs/css-icon.png";
-import JSIcon from "../../assets/imgs/js-icon.png";
-import CSIcon from "../../assets/imgs/c#-icon.png";
-import UnityIcon from "../../assets/imgs/unity-icon.png";
-import UWPIcon from "../../assets/imgs/uwp-icon.png";
-import PythonIcon from "../../assets/imgs/python-icon.png";
-import TFIcon from "../../assets/imgs/tf-icon.png";
-import OpenCVIcon from "../../assets/imgs/opencv-icon.png";
 import { FaGithub } from "react-icons/fa";
 import { RiShareBoxFill } from "react-icons/ri";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
@@ -24,22 +5,22 @@ import { IoLogoGooglePlaystore } from "react-icons/io5";
 const projects = [
   {
     title: "Spotify Stats",
-    thumbnailSrc: SpotifyStatsThumbnail,
+    thumbnailSrc: "/images/thumbnails/spotify-stats-thumb.png",
     technologies: [
       {
-        icon: ReactIcon,
+        icon: "/images/icons/react-icon.png",
         title: "ReactJS",
       },
       {
-        icon: MUIcon,
+        icon: "/images/icons/materialui-icon.png",
         title: "MaterialUI",
       },
       {
-        icon: SpotifyIcon,
+        icon: "/images/icons/spotify-icon.png",
         title: "Spotify API",
       },
       {
-        icon: JSIcon,
+        icon: "/images/icons/js-icon.png",
         title: "Express",
       },
     ],
@@ -62,18 +43,18 @@ const projects = [
   },
   {
     title: "Game of Life",
-    thumbnailSrc: ConwayThumbnail,
+    thumbnailSrc: "/images/thumbnails/conway-thumb.png",
     technologies: [
       {
-        icon: JSIcon,
+        icon: "/images/icons/js-icon.png",
         title: "JavaScript",
       },
       {
-        icon: HTMLIcon,
+        icon: "/images/icons/html-icon.png",
         title: "HTML",
       },
       {
-        icon: CSSIcon,
+        icon: "/images/icons/css-icon.png",
         title: "CSS",
       },
     ],
@@ -96,14 +77,14 @@ const projects = [
   },
   {
     title: "Balley",
-    thumbnailSrc: BalleyThumbnail,
+    thumbnailSrc: "/images/thumbnails/balley-thumb.png",
     technologies: [
       {
-        icon: UnityIcon,
+        icon: "/images/icons/unity-icon.png",
         title: "Unity",
       },
       {
-        icon: CSIcon,
+        icon: "/images/icons/c%23-icon.png",
         title: "C#",
       },
     ],
@@ -120,14 +101,14 @@ const projects = [
   },
   {
     title: "Amazon Price Tracker",
-    thumbnailSrc: PriceTrackerThumbnail,
+    thumbnailSrc: "/images/thumbnails/price-tracker-thumb.png",
     technologies: [
       {
-        icon: UWPIcon,
+        icon: "/images/icons/uwp-icon.png",
         title: "Universal Windows Platform",
       },
       {
-        icon: CSIcon,
+        icon: "/images/icons/c%23-icon.png",
         title: "C#",
       },
     ],
@@ -144,18 +125,18 @@ const projects = [
   },
   {
     title: "Visual Occupancy Detection System",
-    thumbnailSrc: VODSThumbnail,
+    thumbnailSrc: "/images/thumbnails/vods-thumb.png",
     technologies: [
       {
-        icon: PythonIcon,
+        icon: "/images/icons/python-icon.png",
         title: "Python",
       },
       {
-        icon: TFIcon,
+        icon: "/images/icons/tf-icon.png",
         title: "TF",
       },
       {
-        icon: OpenCVIcon,
+        icon: "/images/icons/opencv-icon.png",
         title: "OpenCV",
       },
     ],
@@ -172,26 +153,26 @@ const projects = [
   },
   {
     title: "Porfolio",
-    thumbnailSrc: PortfolioThumbnail,
+    thumbnailSrc: "/images/thumbnails/portfolio-thumb.png",
     technologies: [
       {
-        icon: ReactIcon,
+        icon: "/images/icons/react-icon.png",
         title: "React",
       },
       {
-        icon: SassIcon,
+        icon: "/images/icons/sass-icon.png",
         title: "Sass",
       },
       {
-        icon: JSIcon,
+        icon: "/images/icons/js-icon.png",
         title: "JavaScript",
       },
       {
-        icon: HTMLIcon,
+        icon: "/images/icons/html-icon.png",
         title: "HTML",
       },
       {
-        icon: CSSIcon,
+        icon: "/images/icons/css-icon.png",
         title: "CSS",
       },
     ],

@@ -1,22 +1,11 @@
-import ReactIcon from "../../assets/imgs/react-icon.png";
-import HTMLIcon from "../../assets/imgs/html-icon.png";
-import CSSIcon from "../../assets/imgs/css-icon.png";
-import JSIcon from "../../assets/imgs/js-icon.png";
-import CSIcon from "../../assets/imgs/c#-icon.png";
-import UnityIcon from "../../assets/imgs/unity-icon.png";
-import PythonIcon from "../../assets/imgs/python-icon.png";
-import TSIcon from "../../assets/imgs/typescript-logo.png";
-import ExpressIcon from "../../assets/imgs/express-logo.png";
-import SpringBootIcon from "../../assets/imgs/spring-boot-logo.png";
-
 const skills = [
   {
     title: "JavaScript",
-    src: JSIcon,
+    src: "/images/icons/js-icon.png",
   },
   {
     title: "TypeScript",
-    src: TSIcon,
+    src: "/images/icons/typescript-logo.png",
   },
   {
     title: "Java",
@@ -24,15 +13,15 @@ const skills = [
   },
   {
     title: "SpringBoot",
-    src: SpringBootIcon,
+    src: "/images/icons/spring-boot-logo.png",
   },
   {
     title: "Python",
-    src: PythonIcon,
+    src: "/images/icons/python-icon.png",
   },
   {
     title: "React",
-    src: ReactIcon,
+    src: "/images/icons/react-icon.png",
   },
   {
     title: "NodeJS",
@@ -40,23 +29,23 @@ const skills = [
   },
   {
     title: "ExpressJS",
-    src: ExpressIcon,
+    src: "/images/icons/express-logo.png",
   },
   {
     title: "HTML 5",
-    src: HTMLIcon,
+    src: "/images/icons/html-icon.png",
   },
   {
     title: "CSS 3",
-    src: CSSIcon,
+    src: "/images/icons/css-icon.png",
   },
   {
     title: "C#",
-    src: CSIcon,
+    src: "/images/icons/c%23-icon.png",
   },
   {
     title: "Unity",
-    src: UnityIcon,
+    src: "/images/icons/unity-icon.png",
   },
   {
     title: "MongoDB",

@@ -1,7 +1,4 @@
 import { IoLogoAndroid } from "react-icons/io5";
-import nylLogo from "../imgs/nyl.png";
-import khouryLogo from "../imgs/khoury.jpg";
-import nirmiteeLogo from "../imgs/nirmitee.png";
 
 const jobs = [
   {
@@ -12,7 +9,7 @@ const jobs = [
       "Engineered and enhanced critical APIs and core features for the GuideMe sales platform, significantly impacting over 60% of new insurance sales and supporting thousands of agents nationwide. Also led the design and implementation of a vital Attribute-Based Access Control (ABAC) microservice to bolster application security and developed a novel policy editing system for business users. Additionally, contributed to launching new insurance products and spearheaded data unification efforts across multiple systems, improving data integrity and operational efficiency.",
     icon: (
       <img
-        src={nylLogo} // Use the imported image variable
+        src="/images/logos/nyl.png"
         alt="NYL Logo"
         style={{ width: 40, height: 40, borderRadius: "50%" }}
       />
@@ -32,7 +29,7 @@ const jobs = [
       "Architected and delivered backend APIs for a new Session module, providing agents with crucial customer history and enriching interaction analytics. Drove significant improvements in application reliability by resolving critical defects and championed code quality by refactoring key areas to SOLID principles, enhancing system maintainability.",
     icon: (
       <img
-        src={nylLogo} // Use the imported image variable
+        src="/images/logos/nyl.png"
         alt="NYL Logo"
         style={{ width: 40, height: 40, borderRadius: "50%" }}
       />
@@ -51,7 +48,7 @@ const jobs = [
       "TA'd a 350+ student software engineering course centered on building a real-time multiplayer game like Among Us using TypeScript, React, Express, WebSockets, and RESTful APIs. Mentored teams on object-oriented design, sprint planning, and debugging. Graded code for quality and architecture, requiring deep understanding of event-driven systems and scalable full-stack development.",
     icon: (
       <img
-        src={khouryLogo} // Use the imported image variable
+        src="/images/logos/khoury.jpg"
         alt="Khoury Logo"
         style={{ width: 40, height: 40, borderRadius: "50%" }}
       />
@@ -70,7 +67,7 @@ const jobs = [
       "Enhanced information retrieval by developing robust FastAPI services for various NLP & classification models, Agora RTC video calls, and structure data extraction from unstructured PDF documents.",
     icon: (
       <img
-        src={nirmiteeLogo} // Use the imported image variable
+        src="/images/logos/nirmitee.png"
         alt="Nirmitee Logo"
         style={{ width: 40, height: 40, borderRadius: "50%" }}
       />
@@ -89,7 +86,7 @@ const jobs = [
       "Developed a Python-MongoDB app to retrieve project resources via keyword search, streamlining data access. Built and deployed REST APIs on EC2 for bulk data operations, reducing manual effort by 70% and improving team productivity.",
     icon: (
       <img
-        src={nirmiteeLogo} // Use the imported image variable
+        src="/images/logos/nirmitee.png"
         alt="Nirmitee Logo"
         style={{ width: 40, height: 40, borderRadius: "50%" }}
       />
