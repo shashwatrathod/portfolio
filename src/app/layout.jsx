@@ -1,4 +1,5 @@
 import { Open_Sans, Ubuntu_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "../index.scss";
 
 const openSans = Open_Sans({
@@ -54,7 +55,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${openSans.variable} ${ubuntuMono.variable}`}>
       <body className={openSans.className}>
-        <div id="root">{children}</div>
+        <div id="root">
+          {children}
+          <Analytics />
+        </div>
       </body>
     </html>
   );
