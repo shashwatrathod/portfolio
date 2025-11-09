@@ -1,6 +1,5 @@
 import React from "react";
 import "./heroSection.scss";
-import { ReactComponent as TypingIllustration } from "../../../assets/svgs/typing.svg";
 import PillButton from "../../../components/PillButton/pillButton";
 import Slide from "react-reveal/Slide";
 import socials from "../../../assets/data/socials";
@@ -68,7 +67,7 @@ const HeroSection = () => {
               </div>
               <Slide right>
                 <div className="hero-illustration-container" aria-hidden="true">
-                  <TypingIllustration className="illustration" />
+                  <img src="/images/svgs/typing.svg" className="illustration" alt="Typing illustration" />
                 </div>
               </Slide>
             </div>
