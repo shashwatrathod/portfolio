@@ -24,10 +24,10 @@ $field-font-size: 1.8em;
 .contact-container {
   padding-inline: 5vw;
 
-  font-size: 0.5rem;
+  font-size: 0.5rem; // Relative to global base
 
   @include above_breakpoint(m) {
-    font-size: 10px;
+    font-size: 0.625rem; // 10px relative to global base
   }
 }
 

@@ -32,42 +32,40 @@ const Navbar = () => {
     <>
       <header>
         <nav className={clsx({ "nav-scrolled": hasScrolledPast })}>
-          <div className="nav-container">
-            <div className="nav-title">
-              <ScrollLink
-                to="home"
-                smooth={true}
-                exact={true}
-                spy={true}
-                offset={-80}
-                className="nav-scroll-link"
-              >
-                ~$ ./rathod.sh <span className="blinking-cursor"></span>
-              </ScrollLink>
-            </div>
-            <ul
-              className={clsx("nav-menu", {
-                "nav-menu--expanded": menuOpen,
-              })}
+          <div className="nav-title">
+            <ScrollLink
+              to="home"
+              smooth={true}
+              exact={true}
+              spy={true}
+              offset={-80}
+              className="nav-scroll-link"
             >
-              <NavItem itemName="Skills" itemLink="skills" />
-              <NavItem itemName="Experience" itemLink="experience" />
-              <NavItem itemName="Projects" itemLink="projects" />
-              <NavItem itemName="About" itemLink="about" />
-              <NavItem itemName="Contact Me" itemLink="contact" />
-            </ul>
+              ~$ ./rathod.sh <span className="blinking-cursor"></span>
+            </ScrollLink>
+          </div>
+          <ul
+            className={clsx("nav-menu", {
+              "nav-menu--expanded": menuOpen,
+            })}
+          >
+            <NavItem itemName="Skills" itemLink="skills" />
+            <NavItem itemName="Experience" itemLink="experience" />
+            <NavItem itemName="Projects" itemLink="projects" />
+            <NavItem itemName="About" itemLink="about" />
+            <NavItem itemName="Contact Me" itemLink="contact" />
+          </ul>
 
-            <div
-              className={clsx("hamburger", {
-                "hamburger-open": menuOpen,
-              })}
-              onClick={toggleHamburger}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+          <div
+            className={clsx("hamburger", {
+              "hamburger-open": menuOpen,
+            })}
+            onClick={toggleHamburger}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </nav>
       </header>

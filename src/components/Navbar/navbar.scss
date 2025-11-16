@@ -7,15 +7,23 @@ $textSize: 1.2em;
 nav {
   display: flex;
   position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
+  top: 1rem;
+  left: 50%;
+  right: auto;
   z-index: 10;
-  padding-inline: 5vw;
-  padding-block: 1em;
+  width: min(map-get($breakpoints, l), 95vw);
 
+  // margin: 2em 2em;
   @include transition(all 0.2s ease-in-out);
   font-size: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  color: $textSecondary;
+  @include transform(translateX(-50%));
+  margin: 0;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  background: transparent;
 
   @include above_breakpoint(l) {
     font-size: 1.125rem;
@@ -29,19 +37,15 @@ nav {
 }
 
 .nav-scrolled {
-  background: $bgPrimary;
-  box-shadow: 0px 1px 10px rgba(#212121, 0.2);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(#000, 0.12);
+  box-shadow: 0 10px 28px rgba(#000, 0.12);
 }
 
 .nav-container {
-  display: flex;
-  //   flex-direction: row;
-  width: 100%;
-
-  justify-content: space-between;
-  font-size: $textSize;
-  align-items: center;
-  color: $textSecondary;
+  // removed: merged into nav
 }
 
 .nav-title {
@@ -79,12 +83,15 @@ nav {
     right: 1 * $textSize;
     top: 3 * $textSize;
     border-radius: 5px;
-    background-color: $bgPrimary;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(#000, 0.12);
     width: 50%;
     align-items: center;
     padding-inline: 0;
     padding-block: 1em;
-    box-shadow: 0px 1px 10px rgba(#212121, 0.2);
+    box-shadow: 0 10px 28px rgba(#000, 0.12);
     @include transition(all 0.3s ease-out);
     @include transform(scale(0, 0));
     transform-origin: 100% 0%;

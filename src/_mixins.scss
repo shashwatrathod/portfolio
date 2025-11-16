@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import "./_variables.scss";
 
 @mixin above_breakpoint($breakpoint) {
   @media (min-width: map-get($breakpoints, $breakpoint)) {
