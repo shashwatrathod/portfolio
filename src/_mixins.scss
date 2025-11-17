@@ -60,3 +60,11 @@
   -webkit-transition: $transition;
   transition: $transition;
 }
+
+// Card container mixin for section cards
+@mixin card {
+  border-radius: $radiusLg;
+  background: $surface;
+  box-shadow: $shadowElevation;
+  padding: clamp(20px, 3vw, 40px);
+}

@@ -11,21 +11,21 @@
   display: inline-block;
   padding: 0.5em 0.9em;
   border-radius: 9999px;
-  border: none;
+  border: 1px solid transparent;
   background: transparent;
   @include transition(all 0.2s ease-in-out);
 
   &:hover {
     border: 1px solid $primary;
-    background: rgba($primary, 0.2);
-    color: $textSecondary;
-    box-shadow: 0 4px 12px rgba($primary, 0.25);
+    background: rgba($primary, 0.15);
+    color: $textPrimary;
+    box-shadow: 0 4px 12px rgba($primary, 0.3);
   }
 
   &:focus-visible {
     outline: none;
     border: 1px solid $primary;
-    background: rgba($primary, 0.2);
-    box-shadow: 0 0 0 3px rgba($primary, 0.35);
+    background: rgba($primary, 0.15);
+    box-shadow: 0 0 0 3px rgba($primary, 0.25);
   }
 }

@@ -2,8 +2,8 @@
 @import "../../mixins.scss";
 
 .pillBtn {
-  background-color: $primary;
-  color: $textPrimary;
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  color: $bgPrimary;
   font-weight: 600;
   cursor: pointer;
   padding: 0;
@@ -30,9 +30,9 @@
   }
 
   &:hover {
-    background-color: $secondary;
-    color: $primary;
-    box-shadow: -0.1rem 0.1rem 0.2rem lighten($secondary, 2%);
+    background: linear-gradient(135deg, lighten($primary, 5%) 0%, lighten($secondary, 5%) 100%);
+    box-shadow: 0 8px 24px rgba($primary, 0.4);
+    transform: translateY(-2px);
   }
 }
 

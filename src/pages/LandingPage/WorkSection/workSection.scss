@@ -11,8 +11,10 @@
 }
 
 .work-container {
-  background: $bgSecondary;
+  background: linear-gradient(135deg, $surface 0%, $surfaceElevated 100%);
   border-radius: 14em 0 14em 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: $shadowElevation;
   padding-right: 5vw;
   padding-block: 10vw;
   display: flex;

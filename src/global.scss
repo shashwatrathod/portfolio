@@ -1,1 +1,14 @@
 @import "./_variables.scss";
+
+// CSS Variables for use in JSX inline styles
+:root {
+  --surface-color: #{$surface};
+}
+
+// Global max-width centered container utility for card-based layout
+.container-max {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}

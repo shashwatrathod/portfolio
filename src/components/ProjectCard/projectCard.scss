@@ -2,16 +2,17 @@
 @import "../../variables";
 
 .project {
-  background: $bgPrimary;
+  background: $surface;
   border-radius: 20px;
   overflow: hidden;
-
-  box-shadow: 0 0 5px rgba(#212121, 0.25);
-
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: $shadowElevation;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(#212121, 0.25);
+    box-shadow: $shadowElevationHover;
+    border-color: rgba($primary, 0.3);
+    transform: translateY(-4px);
   }
 }
 
@@ -27,14 +28,14 @@
   }
 
   .project-description {
-    color: $textPrimary;
+    color: $textSecondary;
     font-size: 1.6em;
     text-align: justify;
   }
 }
 
 hr {
-  border-top: 1px solid rgba(#2f2f2f, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-info-header {
@@ -49,7 +50,7 @@ hr {
   .project-title {
     grid-area: title;
     font-size: 2.5em;
-    color: $textSecondary;
+    color: $textPrimary;
     font-weight: 400;
   }
 
@@ -74,13 +75,13 @@ hr {
       display: grid;
       place-content: center;
       text-decoration: none;
-
-      color: $secondary;
-
+      color: $primary;
       border-radius: 50%;
+      transition: all 0.2s ease-in-out;
 
       &:hover {
-        color: darken($secondary, 20);
+        color: $secondary;
+        transform: scale(1.1);
       }
     }
   }

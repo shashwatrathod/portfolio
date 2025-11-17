@@ -1,0 +1,865 @@
+@import "../../_variables.scss";
+@import "../../_mixins.scss";
+
+// Bento Grid Container
+.hero-bento-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: clamp(24px, 3vw, 32px);
+  max-width: clamp(1100px, 90vw, 1400px);
+  margin: clamp(56px, 8vw, 96px) auto;
+  min-height: 80vh;
+  padding: 0;
+
+  @include below_breakpoint(l) {
+    grid-template-columns: repeat(8, 1fr);
+    min-height: auto;
+  }
+
+  @include below_breakpoint(m) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+// Base Card Styles
+.hero-main-card,
+.hero-info-card,
+.hero-stats-card,
+.hero-content-section {
+  @include card;
+  position: relative;
+  overflow: hidden;
+  @include transition(all 300ms cubic-bezier(0.4, 0, 0.2, 1));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  // Frosted glass effect
+  background: linear-gradient(
+    135deg,
+    rgba($surface, 0.6) 0%,
+    rgba($surfaceElevated, 0.6) 100%
+  );
+  backdrop-filter: blur(12px);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadowElevationHover;
+    border-color: rgba($primary, 0.3);
+    background: linear-gradient(
+      135deg,
+      rgba($surface, 0.7) 0%,
+      rgba($surfaceElevated, 0.7) 100%
+    );
+  }
+
+  @include below_breakpoint(m) {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+// Main Branding Card - Left, spans 7 columns, 2 rows
+.hero-main-card {
+  grid-column: 1 / 8;
+  grid-row: 1 / 3;
+  padding: clamp(40px, 5vw, 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include below_breakpoint(l) {
+    grid-column: 1 / 6;
+    grid-row: 1 / 3;
+  }
+
+  @include below_breakpoint(m) {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 32px;
+  }
+}
+
+// Info Card - Right top, spans 5 columns, 1 row
+.hero-info-card {
+  grid-column: 8 / 13;
+  grid-row: 1 / 2;
+  padding: clamp(32px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include below_breakpoint(l) {
+    grid-column: 6 / 9;
+    grid-row: 1 / 2;
+  }
+
+  @include below_breakpoint(m) {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 28px;
+  }
+}
+
+// Stats Card - Right bottom, spans 5 columns, 1 row
+.hero-stats-card {
+  grid-column: 8 / 13;
+  grid-row: 2 / 3;
+  padding: clamp(28px, 3.5vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // NYC Map background for entire stats card
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/thumbnails/new-york-city-map.png");
+    transform: scale(1.8) translateX(50px) translateY(-20px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.07;
+    z-index: 0;
+    pointer-events: none;
+    filter: grayscale(100%) brightness(1.35) contrast(1.1);
+    transform-origin: var(--mouse-x) var(--mouse-y);
+    @include transition(all 1800ms ease-out);
+  }
+
+  &:hover::before {
+    opacity: 0.1;
+    transform: scale(1.9) translateX(50px) translateY(-20px);
+  }
+
+  @include below_breakpoint(l) {
+    grid-column: 6 / 9;
+    grid-row: 2 / 3;
+  }
+
+  @include below_breakpoint(m) {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 24px;
+
+    &::before {
+      opacity: 0.06;
+    }
+  }
+}
+
+// Content Section - Full width bottom
+.hero-content-section {
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
+  padding: clamp(32px, 4vw, 48px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3vw, 40px);
+  align-items: start;
+
+  @include below_breakpoint(l) {
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
+  }
+
+  @include below_breakpoint(m) {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 28px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+// Subtle background decorative elements
+.hero-bg-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+// SVG Background Elements Positioning - Distributed across cards
+.bg-svg {
+  position: absolute;
+  color: $accentPurple;
+  opacity: 0.12;
+  pointer-events: none;
+  @include transition(opacity 400ms ease);
+  filter: blur(0.2px);
+}
+
+// Main Card SVGs
+.hero-bg-main {
+  .bg-svg {
+    &.coffee-cup {
+      top: 8%;
+      right: 6%;
+      width: clamp(70px, 7vw, 100px);
+      height: auto;
+      opacity: 0.1;
+      animation: float 12s ease-in-out infinite;
+      animation-delay: 0s;
+    }
+
+    &.guitar {
+      bottom: 10%;
+      left: 5%;
+      width: clamp(55px, 6vw, 80px);
+      height: auto;
+      opacity: 0.12;
+      transform: translateY(0px) rotate(-15deg);
+      animation: floatGuitar 14s ease-in-out infinite;
+      animation-delay: 2s;
+    }
+
+    &.code-brackets {
+      top: 18%;
+      left: 8%;
+      width: clamp(35px, 4vw, 55px);
+      height: auto;
+      opacity: 0.08;
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    &.star-constellation {
+      top: 15%;
+      right: 15%;
+      width: clamp(120px, 13vw, 180px);
+      height: auto;
+      opacity: 0.06;
+      animation: twinkle 10s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+  }
+}
+
+// Info Card SVGs
+.hero-bg-info {
+  .bg-svg {
+    &.telescope {
+      top: 12%;
+      right: 10%;
+      width: clamp(45px, 5vw, 65px);
+      height: auto;
+      opacity: 0.1;
+      animation: float 13s ease-in-out infinite;
+      animation-delay: 5s;
+    }
+
+    &.planet {
+      bottom: 15%;
+      left: 8%;
+      width: clamp(40px, 4.5vw, 60px);
+      height: auto;
+      opacity: 0.11;
+      animation: orbit 20s linear infinite;
+    }
+
+    &.music-note {
+      bottom: 35%;
+      right: 15%;
+      width: clamp(32px, 3.5vw, 48px);
+      height: auto;
+      opacity: 0.09;
+      animation: float 11s ease-in-out infinite;
+      animation-delay: 3s;
+    }
+  }
+}
+
+// Stats Card SVGs
+.hero-bg-stats {
+  .bg-svg {
+    &.game-controller {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(60px, 7vw, 90px);
+      height: auto;
+      opacity: 0.08;
+      animation: float 13s ease-in-out infinite;
+      animation-delay: 4s;
+    }
+  }
+}
+
+@include below_breakpoint(m) {
+  .hero-bg-main .bg-svg {
+    &.coffee-cup {
+      width: 55px;
+      top: 6%;
+      right: 5%;
+      opacity: 0.08;
+    }
+
+    &.guitar {
+      width: 42px;
+      bottom: 8%;
+      left: 4%;
+      opacity: 0.1;
+    }
+
+    &.code-brackets {
+      width: 28px;
+      top: 16%;
+      left: 6%;
+      opacity: 0.06;
+    }
+
+    &.star-constellation {
+      width: 100px;
+      top: 12%;
+      opacity: 0.05;
+    }
+  }
+
+  .hero-bg-info {
+    .bg-svg {
+      &.telescope {
+        width: 38px;
+        top: 10%;
+        right: 8%;
+        opacity: 0.08;
+      }
+
+      &.planet {
+        width: 32px;
+        bottom: 12%;
+        left: 6%;
+        opacity: 0.09;
+      }
+
+      &.music-note {
+        width: 28px;
+        bottom: 32%;
+        right: 12%;
+        opacity: 0.07;
+      }
+    }
+  }
+
+  .hero-bg-stats .bg-svg {
+    &.game-controller {
+      width: 50px;
+      opacity: 0.07;
+    }
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.03;
+  }
+  50% {
+    opacity: 0.06;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes floatGuitar {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-12deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0.04;
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+
+// Main Card Content
+.main-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vw, 18px);
+}
+
+.hero-kicker {
+  color: $secondary;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  margin: 0;
+  opacity: 0.95;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  color: $primary;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+
+  @supports not (background-clip: text) {
+    color: $textPrimary;
+  }
+
+  @include below_breakpoint(m) {
+    font-size: clamp(2.5rem, 10vw, 3rem);
+  }
+}
+
+.hero-key-phrases {
+  margin: 0;
+  color: $textPrimary;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  line-height: 1.5;
+  font-weight: 500;
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+
+  @include below_breakpoint(m) {
+    font-size: 0.9rem;
+  }
+}
+
+.hero-value-prop {
+  margin: clamp(8px, 1vw, 12px) 0 0 0;
+  color: $textSecondary;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+
+  @include below_breakpoint(m) {
+    font-size: 1.3rem;
+  }
+}
+
+.hero-tech-desc {
+  margin: 0;
+  color: $textPrimary;
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  line-height: 1.7;
+  font-weight: 400;
+  opacity: 0.85;
+
+  @include below_breakpoint(m) {
+    font-size: 0.95rem;
+  }
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  color: $primary;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  text-decoration: none;
+  margin-top: clamp(8px, 1vw, 12px);
+  @include transition(all 250ms ease);
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary;
+    transform: translateX(4px);
+  }
+
+  @include below_breakpoint(m) {
+    font-size: 0.9rem;
+  }
+}
+
+// Info Card Content
+.info-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 20px);
+  pointer-events: none;
+
+  // Allow text selection
+  p {
+    pointer-events: auto;
+  }
+}
+
+.hero-description {
+  margin: 0;
+  color: $textSecondary;
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.7;
+  font-weight: 500;
+
+  @include below_breakpoint(m) {
+    font-size: 0.98rem;
+  }
+}
+
+.hero-interests {
+  margin: 0;
+  color: $textPrimary;
+  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  line-height: 1.7;
+  font-weight: 400;
+  opacity: 0.85;
+
+  @include below_breakpoint(m) {
+    font-size: 0.9rem;
+  }
+}
+
+.hero-stats {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 2vw, 20px);
+  width: 100%;
+
+  @include below_breakpoint(m) {
+    gap: 12px;
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: clamp(16px, 2vw, 20px) clamp(12px, 1.5vw, 16px);
+  background: rgba($surfaceElevated, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  @include transition(all 250ms cubic-bezier(0.4, 0, 0.2, 1));
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba($primary, 0.15) 0%,
+      transparent 100%
+    );
+    opacity: 0;
+    @include transition(opacity 250ms ease);
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-color: rgba($primary, 0.4);
+    background: rgba($surfaceElevated, 1);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include below_breakpoint(m) {
+    padding: 14px 10px;
+    gap: 6px;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.stat-label {
+  position: relative;
+  z-index: 1;
+  color: $textTertiary;
+  font-size: clamp(0.6rem, 0.75vw, 0.7rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.stat-value {
+  position: relative;
+  z-index: 1;
+  color: $textSecondary;
+  font-weight: 800;
+  font-size: clamp(0.85rem, 1.05vw, 1.05rem);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.hero-socials {
+  display: flex;
+  gap: clamp(10px, 1.5vw, 14px);
+  align-items: center;
+  justify-content: center;
+
+  &.main-card-socials {
+    justify-content: flex-start;
+    margin-top: clamp(16px, 2vw, 24px);
+  }
+}
+
+.hero-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(42px, 4vw, 48px);
+  height: clamp(42px, 4vw, 48px);
+  border-radius: 9999px;
+  background: linear-gradient(135deg, $surfaceElevated 0%, $bgTertiary 100%);
+  color: $textPrimary;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  @include transition(all 250ms cubic-bezier(0.4, 0, 0.2, 1));
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+    opacity: 0;
+    @include transition(opacity 250ms ease);
+  }
+
+  svg,
+  img {
+    position: relative;
+    z-index: 1;
+    @include transition(all 250ms ease);
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    transform: scale(1.12) rotate(5deg);
+    box-shadow: 0 8px 24px rgba($primary, 0.4);
+    border-color: rgba($primary, 0.5);
+
+    &::before {
+      opacity: 1;
+    }
+
+    svg,
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    transform: scale(1.05) rotate(3deg);
+  }
+}
+
+// Content Section Background SVGs
+.hero-bg-content {
+  .bg-svg {
+    &.music-note {
+      top: 10%;
+      left: 8%;
+      width: clamp(40px, 4.5vw, 60px);
+      height: auto;
+      opacity: 0.09;
+      animation: float 11s ease-in-out infinite;
+      animation-delay: 3s;
+    }
+
+    &.code-brackets {
+      bottom: 12%;
+      right: 10%;
+      width: clamp(35px, 4vw, 55px);
+      height: auto;
+      opacity: 0.08;
+      animation: pulse 6s ease-in-out infinite;
+    }
+  }
+}
+
+// Spotify Container
+.spotify-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vw, 16px);
+}
+
+.section-label {
+  margin: 0;
+  color: $textSecondary;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.spotify-player {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  @include transition(all 250ms ease);
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+  }
+
+  @include below_breakpoint(m) {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+// Currently Container
+.currently-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vw, 16px);
+}
+
+.currently-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 1.5vw, 16px);
+
+  @include below_breakpoint(m) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.currently-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 16px);
+  padding: clamp(14px, 1.8vw, 18px);
+  background: rgba($surfaceElevated, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  @include transition(all 250ms cubic-bezier(0.4, 0, 0.2, 1));
+  backdrop-filter: blur(8px);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba($secondary, 0.4);
+    background: rgba($surfaceElevated, 1);
+  }
+
+  @include below_breakpoint(m) {
+    padding: 12px;
+    gap: 12px;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.currently-icon {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.currently-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.currently-title {
+  color: $textSecondary;
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.currently-desc {
+  color: $textPrimary;
+  font-size: clamp(0.8rem, 0.88vw, 0.88rem);
+  font-weight: 400;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+// Respect prefers-reduced-motion for any transitions
+@media (prefers-reduced-motion: reduce) {
+  .hero-main-card,
+  .hero-info-card,
+  .hero-stats-card,
+  .hero-content-section,
+  .stat-item,
+  .hero-social-link,
+  .currently-item,
+  .spotify-player,
+  .bg-svg,
+  .guitar-strings-svg {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .hero-main-card,
+  .hero-info-card,
+  .hero-stats-card,
+  .hero-content-section {
+    &:hover {
+      transform: none !important;
+    }
+  }
+
+  .hero-bg-main .bg-svg.guitar {
+    transform: rotate(-15deg) translateY(0px) !important;
+  }
+
+  .hero-bg-stats .bg-svg.game-controller {
+    transform: translate(-50%, -50%) !important;
+  }
+}

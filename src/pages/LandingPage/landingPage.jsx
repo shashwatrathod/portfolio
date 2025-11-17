@@ -6,11 +6,12 @@ import ProjectsSection from "./ProjectsSection/projectsSetion";
 import SkillsSection from "./SkillsSection/skillsSection";
 import WorkSection from "./WorkSection/workSection";
 import "./landingPage.scss";
+import HeroCard from "./HeroCard";
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <HeroSection />
+      <HeroCard />
       <SkillsSection />
       <WorkSection />
       <ProjectsSection />

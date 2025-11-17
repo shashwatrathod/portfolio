@@ -1,18 +1,25 @@
 // Base font size - all font sizes should be relative to this
 $baseFontSize: 16px; // 1rem = 16px by default
 
-$bgPrimary: hsl(
-  173,
-  40%,
-  95%
-); //* Reflect change in this color inside myVerticalTimeline inline styles as well.
-$bgSecondary: hsl(170, 41%, 88%);
-$primary: hsl(167, 34%, 79%);
-$secondary: hsl(193, 75%, 17%);
-$textPrimary: hsl(191, 39%, 33%);
-$textSecondary: hsl(193, 40%, 23%);
-$textTertiary: hsl(158, 37%, 47%);
-$hint: hsl(349, 66%, 64%);
+// Dark Pastel Theme - Background Colors
+$bgPrimary: #0f0e17; // Deep midnight blue-purple - main page background
+$bgSecondary: #1c1b26; // Rich dark purple-gray - card surfaces
+$bgTertiary: #2a2838; // Elevated purple-gray - elevated elements
+$bgElevated: #2a2838; // Alternative name for elevated surfaces
+
+// Dark Pastel Theme - Accent Colors (Bold Pastels)
+$primary: #7dd3fc; // Soft cyan/aqua - CTAs, highlights, hover states
+$secondary: #f9a8a8; // Coral pink - secondary highlights, tech badges
+$accentGreen: #a7f3d0; // Mint green - success states, skill indicators
+$accentPurple: #c4b5fd; // Lavender purple - special decorative elements
+$accentPink: #f9a8a8; // Coral pink - alternative accent (same as secondary)
+$hint: #fbbf69; // Apricot peach - warnings, important notes
+
+// Dark Pastel Theme - Text Colors
+$textPrimary: #f8fafc; // Crisp off-white - headings, important text
+$textSecondary: #cbd5e1; // Light blue-gray - body text, descriptions
+$textTertiary: #94a3b8; // Muted gray - labels, metadata
+
 $breakpoints: (
   xxl: 1400px,
   xl: 1200px,
@@ -20,3 +27,14 @@ $breakpoints: (
   m: 768px,
   s: 600px,
 );
+
+// Dark theme surface and elevation tokens for card layout
+$background: $bgPrimary;
+// Card surface with subtle gradient capability
+$surface: $bgSecondary;
+$surfaceElevated: $bgTertiary;
+// Corner radius for cards
+$radiusLg: 16px;
+// Prominent elevation shadow for dark theme - deeper shadows for the darker background
+$shadowElevation: 0 12px 40px rgba(0, 0, 0, 0.6);
+$shadowElevationHover: 0 16px 48px rgba(0, 0, 0, 0.7);

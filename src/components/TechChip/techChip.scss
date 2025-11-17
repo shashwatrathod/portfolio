@@ -6,10 +6,18 @@
   flex-direction: row;
   gap: 0.5em;
   border-radius: 20px;
-  border: 1px solid $primary;
+  border: 1px solid rgba($secondary, 0.5);
+  background: rgba($surfaceElevated, 0.5);
   padding-inline: 1.2em;
   padding-block: 0.5em;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border-color: $secondary;
+    background: rgba($surfaceElevated, 0.8);
+    transform: translateY(-1px);
+  }
 
   &-img {
     height: 2.2em;
@@ -17,7 +25,7 @@
   }
 
   &-text {
-    color: $textPrimary;
+    color: $textSecondary;
     font-size: 1.3em;
   }
 }

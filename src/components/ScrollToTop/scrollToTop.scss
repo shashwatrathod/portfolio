@@ -2,11 +2,9 @@
 @import "../../mixins";
 
 .scroll-button {
-  background-color: $primary;
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
   display: flex;
-  //   display: flex;
   visibility: hidden;
-
   opacity: 0;
   border-radius: 50%;
   position: fixed;
@@ -15,15 +13,17 @@
   font-size: 2.75rem;
   padding: 0.5rem;
   z-index: 10;
-  box-shadow: 0px 1px 10px rgba(#212121, 0.3);
-  border: 0px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  color: $textPrimary;
+  color: $bgPrimary;
 
-  @include transition("background-color, opacity 0.3s ease-in-out");
+  @include transition("all 0.3s ease-in-out");
 
   &:hover {
-    background-color: darken($primary, 5%);
+    background: linear-gradient(135deg, lighten($primary, 5%) 0%, lighten($secondary, 5%) 100%);
+    box-shadow: 0 10px 32px rgba($primary, 0.6);
+    transform: translateY(-3px);
   }
 
   &--visible {

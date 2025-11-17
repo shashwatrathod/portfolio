@@ -17,6 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $bgPrimary;
+  color: $textSecondary;
 }
 
 #root {
@@ -31,17 +32,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: 0 0 10px rgba(#212121, 0.3);
+  background-color: $bgPrimary;
   border-radius: 10px;
-  background-color: #f5f5f5;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $secondary;
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darken($color: $secondary, $amount: 5%);
+  background: linear-gradient(135deg, lighten($primary, 5%) 0%, lighten($secondary, 5%) 100%);
 }

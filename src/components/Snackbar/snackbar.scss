@@ -15,13 +15,15 @@
 }
 
 .snackbar-success {
-  background-color: #28a745;
-  color: white;
+  background-color: $accentGreen;
+  color: $bgPrimary;
+  font-weight: 600;
 }
 
 .snackbar-error {
-  background-color: #dc3545;
-  color: white;
+  background-color: $primary;
+  color: $bgPrimary;
+  font-weight: 600;
 }
 
 @include keyframes(fadein) {

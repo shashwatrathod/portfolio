@@ -49,7 +49,7 @@
 
 .about-content-container {
   font-size: 1.8em;
-  color: $textPrimary;
+  color: $textSecondary;
   position: relative;
 
   @include above_breakpoint(l) {
