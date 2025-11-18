@@ -11,13 +11,13 @@ const TechnologyCard = ({ skill, index, isRelated, onHover, onLeave }) => {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
-        duration: 0.4,
-        delay: index * 0.05,
-        ease: [0.4, 0, 0.2, 1],
+        duration: 0.3,
+        delay: index * 0.04,
+        ease: "easeOut",
       }}
       whileHover={{
-        scale: 1.08,
-        transition: { duration: 0.2 },
+        scale: 1.05,
+        transition: { type: "spring", stiffness: 300, damping: 20 },
       }}
       onMouseEnter={() => onHover && onHover(skill.title)}
       onMouseLeave={() => onLeave && onLeave()}

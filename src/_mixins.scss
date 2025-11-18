@@ -54,11 +54,11 @@
   transform: $transforms;
 }
 
-@mixin transition($transition) {
-  -moz-transition: $transition;
-  -o-transition: $transition;
-  -webkit-transition: $transition;
-  transition: $transition;
+@mixin transition($transitions...) {
+  -moz-transition: $transitions;
+  -o-transition: $transitions;
+  -webkit-transition: $transitions;
+  transition: $transitions;
 }
 
 // Card container mixin for section cards

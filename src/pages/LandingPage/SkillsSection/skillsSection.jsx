@@ -97,34 +97,46 @@ const SkillsSection = () => {
         <div className="skills-content" ref={containerRef}>
           {/* SVG for drawing connection lines */}
           <svg className="skills-connections" aria-hidden="true">
-            {connections.map((connection, index) => (
-              <motion.line
-                key={`${connection.from.x}-${connection.to.x}-${index}`}
-                x1={connection.from.x}
-                y1={connection.from.y}
-                x2={connection.to.x}
-                y2={connection.to.y}
-                stroke="url(#connectionGradient)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
-                exit={{ pathLength: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-            ))}
-            <defs>
-              <linearGradient
-                id="connectionGradient"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#f9a8a8" stopOpacity="0.6" />
-              </linearGradient>
-            </defs>
+            {connections.map((connection, index) => {
+              // Calculate control point for quadratic curve (offset from midpoint)
+              const midX = (connection.from.x + connection.to.x) / 2;
+              const midY = (connection.from.y + connection.to.y) / 2;
+              const offsetX = (connection.to.y - connection.from.y) * 0.15;
+              const offsetY = (connection.from.x - connection.to.x) * 0.15;
+              const controlX = midX + offsetX;
+              const controlY = midY + offsetY;
+
+              const pathData = `M ${connection.from.x} ${connection.from.y} Q ${controlX} ${controlY} ${connection.to.x} ${connection.to.y}`;
+
+              return (
+                <g key={`${connection.from.x}-${connection.to.x}-${index}`}>
+                  {/* Outer glow layer for silky effect */}
+                  <motion.path
+                    d={pathData}
+                    stroke="rgba(226, 232, 240, 0.15)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    fill="none"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                  />
+                  {/* Main thread */}
+                  <motion.path
+                    d={pathData}
+                    stroke="rgba(226, 232, 240, 0.6)"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    fill="none"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                  />
+                </g>
+              );
+            })}
           </svg>
 
           {/* Render skills grouped by category */}
