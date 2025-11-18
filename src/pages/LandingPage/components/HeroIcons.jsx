@@ -243,4 +243,96 @@ export const GuitarStringsSVG = () => (
   </svg>
 );
 
+export const ProgrammerDeskSVG = () => (
+  <svg
+    className="bg-svg programmer-desk"
+    viewBox="0 0 800 400"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <defs>
+      <pattern id="key-pattern" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+        <rect x="2" y="2" width="24" height="24" rx="4" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+      </pattern>
+    </defs>
+
+    {/* Desk Mat */}
+    <rect
+      x="40"
+      y="50"
+      width="720"
+      height="300"
+      rx="15"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      opacity="0.3"
+    />
+
+    {/* Notebook - Moved Below Mug */}
+    <g transform="translate(150, 200) rotate(5)">
+      <rect
+        x="0"
+        y="0"
+        width="100"
+        height="140"
+        rx="4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        opacity="0.4"
+      />
+      {/* Binding */}
+      <path d="M10 0 v140" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+      {/* Lines */}
+      <path d="M20 20 h70 M20 40 h70 M20 60 h70 M20 80 h70 M20 100 h70 M20 120 h50" stroke="currentColor" strokeWidth="1" opacity="0.2" />
+    </g>
+
+    {/* Coffee Mug - Moved slightly right */}
+    <g transform="translate(190, 90)">
+      <circle cx="35" cy="35" r="30" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5" />
+      <circle cx="35" cy="35" r="24" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+      <circle cx="35" cy="35" r="20" fill="currentColor" opacity="0.1" />
+      <path d="M65 20 Q80 20 80 35 Q80 50 65 50" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5" />
+    </g>
+
+    {/* Keyboard - Centered relative to mat */}
+    <g transform="translate(280, 120)">
+      <rect
+        x="0"
+        y="0"
+        width="380"
+        height="140"
+        rx="8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        opacity="0.5"
+      />
+      {/* Key Rows using Pattern */}
+      <rect x="10" y="10" width="360" height="28" fill="url(#key-pattern)" opacity="0.8" />
+      <rect x="10" y="40" width="360" height="28" fill="url(#key-pattern)" opacity="0.8" />
+      <rect x="10" y="70" width="360" height="28" fill="url(#key-pattern)" opacity="0.8" />
+      
+      {/* Spacebar Row */}
+      <rect x="10" y="100" width="80" height="28" rx="4" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+      <rect x="100" y="100" width="180" height="28" rx="4" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+      <rect x="290" y="100" width="80" height="28" rx="4" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+    </g>
+
+    {/* Mouse */}
+    <g transform="translate(690, 150)">
+      <path
+        d="M0 0 C0 -20, 50 -20, 50 0 L50 70 C50 90, 0 90, 0 70 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        opacity="0.5"
+      />
+      <line x1="25" y1="0" x2="25" y2="35" stroke="currentColor" strokeWidth="1.5" opacity="0.4" />
+      <rect x="22" y="10" width="6" height="12" rx="2" fill="currentColor" opacity="0.2" />
+    </g>
+  </svg>
+);
+
 

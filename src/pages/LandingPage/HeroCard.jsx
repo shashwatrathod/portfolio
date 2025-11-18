@@ -7,14 +7,9 @@ import { Link as ScrollLink } from "react-scroll";
 import socials from "../../assets/data/socials";
 import StarField from "./components/StarField/StarField";
 import {
-  CoffeeCupSVG,
-  GuitarSVG,
   GameControllerSVG,
-  CodeBracketsSVG,
-  MusicNoteSVG,
-  TelescopeSVG,
-  PlanetSVG,
   GuitarStringsSVG,
+  ProgrammerDeskSVG,
 } from "./components/HeroIcons";
 import useParallax from "../../hooks/useParallax";
 
@@ -110,9 +105,9 @@ const HeroCard = () => {
           <div className="hero-info-card">
             <div className="hero-bg-elements hero-bg-info" aria-hidden="true">
               <GuitarStringsSVG />
-              <TelescopeSVG />
+              {/* <TelescopeSVG />
               <PlanetSVG />
-              <MusicNoteSVG />
+              <MusicNoteSVG /> */}
             </div>
             <div className="info-card-content">
               <p className="hero-description">
@@ -156,13 +151,12 @@ const HeroCard = () => {
 
           {/* Content Section - Spotify & Currently */}
           <div className="hero-content-section">
-            {/* <div
+            <div
               className="hero-bg-elements hero-bg-content"
               aria-hidden="true"
             >
-              <MusicNoteSVG />
-              <CodeBracketsSVG />
-            </div> */}
+              <ProgrammerDeskSVG />
+            </div>
 
             {/* Spotify Player */}
             <div className="spotify-container">

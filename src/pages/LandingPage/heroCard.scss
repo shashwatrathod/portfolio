@@ -739,6 +739,21 @@
       opacity: 0.08;
       animation: pulse 6s ease-in-out infinite;
     }
+
+    &.programmer-desk {
+      top: 50%;
+      left: 40%;
+      width: 125%;
+      height: 125%;
+      transform: translate(-50%, -50%);
+      opacity: 0.08;
+      color: $textPrimary;
+      pointer-events: none;
+
+      @include below_breakpoint(l) {
+        display: none;
+      }
+    }
   }
 }
 
