@@ -24,9 +24,8 @@ const SkillsSection = () => {
   const categoryOrder = [
     "Language",
     "Frontend",
-    "Backend",
+    "Backend & Cloud",
     "Database",
-    "Game Engine",
   ];
 
   // Calculate connections between related skills
@@ -89,7 +88,7 @@ const SkillsSection = () => {
           >
             <h2 className="skills-title">Tech Stack</h2>
             <p className="skills-subtitle">
-              Technologies I work with to build scalable solutions
+              The tech I use today. (But I'm not married to it— open to dating other frameworks too)
             </p>
           </motion.div>
         </div>

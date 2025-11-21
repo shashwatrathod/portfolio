@@ -1,12 +1,19 @@
+import React from "react";
 import { IoLogoAndroid } from "react-icons/io5";
 
 const jobs = [
   {
     jobTitle: "Software Engineer - Senior Associate",
     jobSubtitle: "New York Life Insurance Company",
+    location: "New York, NY",
+    type: "Full-time",
     date: "01/2024 - Present",
-    description:
-      "Engineered and enhanced critical APIs and core features for the GuideMe sales platform, significantly impacting over 60% of new insurance sales and supporting thousands of agents nationwide. Also led the design and implementation of a vital Attribute-Based Access Control (ABAC) microservice to bolster application security and developed a novel policy editing system for business users. Additionally, contributed to launching new insurance products and spearheaded data unification efforts across multiple systems, improving data integrity and operational efficiency.",
+    description: [
+      "Architected and delivered core platform features powering **70%+ of new insurance sales** for a massive user base.",
+      "Led the development of a high-throughput, low-latency **ABAC microservice** in Go to enhance system security.",
+      "Engineered an asynchronous **meeting summarizer** service using OpenAI Whisper and RAG for automated transcription.",
+      "Spearheaded a platform-wide **quality initiative** through TDD and refactoring, significantly boosting system reliability."
+    ],
     icon: (
       <img
         src="/images/logos/nyl.png"
@@ -19,14 +26,19 @@ const jobs = [
       color: "white",
       background: "#dcb723",
     },
-    technologies: ["Spring Boot", "Java", "NodeJS", "React", "SQL", "Python"],
+    technologies: ["Spring Boot", "Java", "Go", "React", "AWS", "Python"],
   },
   {
     jobTitle: "Software Engineer Co-op",
     jobSubtitle: "New York Life Insurance Company",
+    location: "New York, NY",
+    type: "Co-op",
     date: "01/2023 - 08/2023",
-    description:
-      "Architected and delivered backend APIs for a new Session module, providing agents with crucial customer history and enriching interaction analytics. Drove significant improvements in application reliability by resolving critical defects and championed code quality by refactoring key areas to SOLID principles, enhancing system maintainability.",
+    description: [
+      "Designed and implemented backend APIs for a high-traffic **Session Module**, unlocking vital customer history for thousands of agents.",
+      "Bolstered **application reliability** by resolving critical defects and enhancing interaction analytics to drive data-led decisions.",
+      "Modernized the codebase by refactoring legacy systems to **SOLID principles**, ensuring scalability and maintainability."
+    ],
     icon: (
       <img
         src="/images/logos/nyl.png"
@@ -43,9 +55,14 @@ const jobs = [
   {
     jobTitle: "Teaching Assistant",
     jobSubtitle: "Northeastern University",
-    date: "01/2022 - 12/2022, 08/2023 - 12/2023",
-    description:
-      "TA'd a 350+ student software engineering course centered on building a real-time multiplayer game like Among Us using TypeScript, React, Express, WebSockets, and RESTful APIs. Mentored teams on object-oriented design, sprint planning, and debugging. Graded code for quality and architecture, requiring deep understanding of event-driven systems and scalable full-stack development.",
+    location: "Boston, MA",
+    type: "Part-time",
+    date: "01/2022 - 12/2023",
+    description: [
+      "Mentored **350+ students** in advanced software engineering, guiding teams through the full lifecycle of building scalable, real-time applications.",
+      "Provided technical leadership on **object-oriented design**, event-driven architecture, and sprint planning for complex semester-long projects.",
+      "Evaluated and critiqued code quality, enforcing industry best practices in **TypeScript, React, and RESTful API design**."
+    ],
     icon: (
       <img
         src="/images/logos/khoury.jpg"
@@ -62,9 +79,13 @@ const jobs = [
   {
     jobTitle: "Software Developer Intern",
     jobSubtitle: "Nirmitee.io",
+    location: "Remote",
+    type: "Internship",
     date: "01/2021 - 05/2021",
-    description:
-      "Enhanced information retrieval by developing robust FastAPI services for various NLP & classification models, Agora RTC video calls, and structure data extraction from unstructured PDF documents.",
+    description: [
+      "Engineered robust **FastAPI microservices** to deploy NLP and classification models, significantly enhancing the platform's information retrieval capabilities.",
+      "Integrated **Agora RTC** to enable seamless real-time video communication and automated structured data extraction from complex documents."
+    ],
     icon: (
       <img
         src="/images/logos/nirmitee.png"
@@ -81,9 +102,13 @@ const jobs = [
   {
     jobTitle: "AI/ML Analyst Intern",
     jobSubtitle: "Nirmitee.io",
+    location: "Remote",
+    type: "Internship",
     date: "09/2020 - 11/2020",
-    description:
-      "Developed a Python-MongoDB app to retrieve project resources via keyword search, streamlining data access. Built and deployed REST APIs on EC2 for bulk data operations, reducing manual effort by 70% and improving team productivity.",
+    description: [
+      "Developed a high-performance **Python-MongoDB application** to streamline resource retrieval, optimizing data access patterns for the team.",
+      "Deployed scalable REST APIs on **AWS EC2** to automate bulk data operations, reducing manual processing effort by **70%**."
+    ],
     icon: (
       <img
         src="/images/logos/nirmitee.png"
@@ -100,9 +125,13 @@ const jobs = [
   {
     jobTitle: "Android Developer Intern",
     jobSubtitle: "Eople Internet Pvt Ltd",
+    location: "Pune, India",
+    type: "Internship",
     date: "07/2019 - 08/2019",
-    description:
-      "Integrated Android Location API and Google Maps intent with custom long press and touch actions. Built intuitive UI/UX for multiple app intents. Worked with Firebase Realtime Database and Firestore to support dynamic, real-time data features.",
+    description: [
+      "Integrated **Android Location APIs** and Google Maps to create location-aware features with custom gesture controls.",
+      "Built a responsive, intuitive UI/UX and leveraged **Firebase Realtime Database** to power dynamic, synchronized app experiences."
+    ],
     icon: <IoLogoAndroid />,
     iconStyle: {
       color: "white",
