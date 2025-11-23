@@ -39,7 +39,7 @@ const projects = [
       },
     ],
     description:
-      "View your spotify top artists, top tracks and recently played tracks, all at one place! SpotifyStats connects with Spotify's API to show you your spotify usage data 📈. The app is built using MaterialUI for ReactJS and communicates to SpotifyAPI via a secured Express backend. Developed using the best practices in Authentication and Authorization.",
+      "A comprehensive dashboard visualizing your Spotify listening habits. Leverages the Spotify API to aggregate data on top artists and tracks, presented through a responsive MaterialUI interface. Features secure OAuth authentication and a robust Express backend.",
   },
   {
     title: "Game of Life",
@@ -73,7 +73,7 @@ const projects = [
       },
     ],
     description:
-      "The Game of Life is an evolution simulator game devised by John Conway. Each cell on the two-dimensional grid can either be dead or alive. The state of each cell in the next generation is decided by a set of rules. The interactions of these cells through the generations demonstrates cellular automaton 👨‍🔬 and also creates some spectacular looking patterns.",
+      "An interactive implementation of Conway's Game of Life. This zero-player cellular automaton simulates complex evolution patterns based on initial states. Built to demonstrate algorithmic efficiency and DOM manipulation in a pure JavaScript environment.",
   },
   {
     title: "Balley",
@@ -97,7 +97,7 @@ const projects = [
       },
     ],
     description:
-      "Balley is a 2D hypercasual infinite-runner type game made using Unity. The goal is to stay alive for as long as possible, gain points by bouncing off the raised platforms and to collect coins and power-ups while you're at it. The game gets progressively difficult as the points increase & also features an in-game store from where players can buy skins and powerups.",
+      "A physics-based 2D infinite runner developed in Unity. Features dynamic obstacle generation, progressive difficulty scaling, and an integrated economy system. Optimized for mobile performance with smooth frame rates and responsive touch controls.",
   },
   {
     title: "Amazon Price Tracker",
@@ -121,7 +121,7 @@ const projects = [
       },
     ],
     description:
-      "Amazon Price Tracker tracks the price of items you like on Amazon for you. It then alerts the user via a notification when the price of an item in the list equals or goes below the reasonable price set by the user. The app by default runs in the background and checks for changes in price of the items every 15 minutes. It achieves this functionality by the means of web scraping.",
+      "An automated background service that monitors product prices on Amazon. Utilizes efficient web scraping to track fluctuations and delivers real-time notifications when targets are met. Built as a Universal Windows Platform (UWP) app for seamless desktop integration.",
   },
   {
     title: "Visual Occupancy Detection System",
@@ -149,7 +149,7 @@ const projects = [
       },
     ],
     description:
-      "VODS for smart parking lot management distinguishes between empty and occupied parking spaces in a lot. It uses a CNN model trained on over 120k images. As the roads get more crammed up with cars, the practical implications of a low-cost system that can identify free spaces for the driver are huge in terms of time saved and pollution controlled.",
+      "A computer vision solution for real-time parking management. Deploys a custom CNN model trained on 120k+ images to accurately detect space occupancy. Designed to reduce urban congestion by guiding drivers to available spots via an efficient, low-cost camera system.",
   },
   {
     title: "Porfolio",
@@ -191,7 +191,7 @@ const projects = [
       },
     ],
     description:
-      "The portfolio is designed and developed from scratch taking some inspiration from designs on Dribble. The website is developed using ReactJS which allows for quick, efficient and consistent UI changes across the board. Designed in Figma, the website features a modern monochromatic design with an intuitive UX. ",
+      "A modern, high-performance portfolio website built with React and Sass. Features a custom 'Cinematic Minimalist' design system, responsive grid layouts, and subtle micro-interactions. Engineered for maintainability and a premium user experience.",
   },
 ];
 

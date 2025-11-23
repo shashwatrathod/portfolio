@@ -1,46 +1,91 @@
-@import "../../../mixins";
 @import "../../../variables";
+@import "../../../mixins";
 
-#projects {
-  margin-block: 3rem;
+.projects-section {
+  padding: 120px 0;
+  background-color: $bgPrimary;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba($primary, 0.03) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 .projects-container {
-  padding-inline: 5vw;
-  font-size: 0.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
 
-  @include above_breakpoint(m) {
-    font-size: 0.625rem;
+.projects-header {
+  text-align: center;
+  margin-bottom: 80px;
+
+  .projects-title {
+    margin: 0 0 clamp(12px, 1.5vw, 16px) 0;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: $primary;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
   }
 
-  & > * + * {
-    margin-top: 2rem;
+  .projects-subtitle {
+    margin: 0 auto;
+    color: $textSecondary;
+    font-size: clamp(1rem, 1.15vw, 1.15rem);
+    line-height: 1.6;
+    font-weight: 500;
+    opacity: 0.9;
+    max-width: 600px;
   }
 }
 
 .projects-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 32px;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 24px; // Space for scrollbar/shadow
+    margin: 0 -20px; // Negative margin to allow full-width scroll
+    padding-left: 20px; // Restore padding
+    padding-right: 20px; // Restore padding
+    scroll-padding-left: 20px; // Align snap points with padding
+    align-items: stretch; // Ensure all cards are the same height
+    
+    // Hide scrollbar
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-  gap: 2rem;
-
-  @include above_breakpoint(l) {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    > * {
+      min-width: 85vw;
+      max-width: 85vw; // Enforce consistent width
+      scroll-snap-align: center;
+      flex-shrink: 0; // Prevent shrinking
+      display: flex; // Ensure the card itself is a flex container (if not already)
+      flex-direction: column;
+    }
   }
-  @include above_breakpoint(xxl) {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5rem;
-  }
-}
-
-.projects-title-container {
-  text-align: center;
-}
-
-.projects-title {
-  @include title_text;
-}
-
-.projects-subtitle {
-  @include subtitle_text;
 }

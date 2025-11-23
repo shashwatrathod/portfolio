@@ -20,6 +20,10 @@
 .env*
 
 npm-debug.log*
+.pnpm-store
 yarn-debug.log*
 yarn-error.log*
 .vercel
+.next
+.cursor
+.agent

@@ -52,7 +52,7 @@ const Navbar = () => {
             <NavItem itemName="Skills" itemLink="skills" />
             <NavItem itemName="Experience" itemLink="experience" />
             <NavItem itemName="Projects" itemLink="projects" />
-            <NavItem itemName="About" itemLink="about" />
+            {/* <NavItem itemName="About" itemLink="about" /> */}
             <NavItem itemName="Contact Me" itemLink="contact" />
           </ul>
 
