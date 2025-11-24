@@ -10,7 +10,7 @@ import {
   GameControllerSVG,
   GuitarStringsSVG,
   ProgrammerDeskSVG,
-} from "./components/HeroIcons";
+} from "../../components/HeroIcons";
 import useParallax from "../../hooks/useParallax";
 
 const HeroCard = () => {
@@ -41,8 +41,8 @@ const HeroCard = () => {
           aria-labelledby="hero-heading"
         >
           {/* Main Branding Card */}
-          <div 
-            className="hero-main-card" 
+          <div
+            className="hero-main-card"
             ref={mainCardRef}
             onMouseMove={handleMainCardMouseMove}
           >
@@ -65,9 +65,9 @@ const HeroCard = () => {
               </h2>
               <p className="hero-tech-desc">
                 I bridge the gap between complex backend architecture and
-                intuitive user experiences. Whether it's building high-throughput
-                microservices or crafting pixel-perfect UIs, I build software
-                that works as good as it looks.
+                intuitive user experiences. Whether it's building
+                high-throughput microservices or crafting pixel-perfect UIs, I
+                build software that works as good as it looks.
               </p>
               <ScrollLink
                 to="projects"
@@ -113,12 +113,12 @@ const HeroCard = () => {
               <p className="hero-description">
                 I'm a problem solver who loves diving deep into technologies to
                 find solutions that work. A fast learner who thrives on
-                challenges, I'm always exploring new languages and tools to build
-                better software.
+                challenges, I'm always exploring new languages and tools to
+                build better software.
               </p>
               <p className="hero-interests">
-                When I'm not hunting down race conditions or struggling to center
-                a div, you'll find me stargazing, strumming my guitar, or
+                When I'm not hunting down race conditions or struggling to
+                center a div, you'll find me stargazing, strumming my guitar, or
                 strategizing in competitive games.
               </p>
             </div>

@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import "./technologyCard.scss";
 
 const TechnologyCard = ({ skill, index, isRelated, onHover, onLeave }) => {
+  if (!skill || !skill.src) {
+    return null;
+  }
+
   return (
     <motion.div
       className={`tech-card ${isRelated ? "tech-card--related" : ""}`}

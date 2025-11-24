@@ -1,7 +1,7 @@
 import React from "react";
 import "./workSection.scss";
 import jobs from "../../../assets/data/jobs";
-import ExperienceCard from "./components/ExperienceCard";
+import ExperienceCard from "./_components/ExperienceCard";
 import { motion } from "framer-motion";
 
 const WorkSection = () => {
@@ -16,9 +16,7 @@ const WorkSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="work-title">Experience</h2>
-            <p className="work-subtitle">
-              My professional journey.
-            </p>
+            <p className="work-subtitle">My professional journey.</p>
           </motion.div>
         </div>
 

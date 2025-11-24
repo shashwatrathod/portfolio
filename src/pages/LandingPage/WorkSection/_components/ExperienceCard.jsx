@@ -3,11 +3,17 @@ import "./experienceCard.scss";
 import { motion } from "framer-motion";
 
 const ExperienceCard = ({ job, index }) => {
+  if (!job || !job.iconStyle) {
+    return null;
+  }
+
   const isLeft = index % 2 === 0;
 
   return (
     <motion.div
-      className={`experience-card-wrapper ${isLeft ? "aligned-left" : "aligned-right"}`}
+      className={`experience-card-wrapper ${
+        isLeft ? "aligned-left" : "aligned-right"
+      }`}
       initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -21,9 +27,7 @@ const ExperienceCard = ({ job, index }) => {
       </div>
 
       {/* Date (Desktop: Left side, Mobile: Inside card) */}
-      <div className="experience-date desktop-only">
-        {job.date}
-      </div>
+      <div className="experience-date desktop-only">{job.date}</div>
 
       {/* Main Card */}
       <div className={`experience-card ${isLeft ? "aligned-left" : ""}`}>

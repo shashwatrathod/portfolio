@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import skills from "../../../assets/data/skills";
-import TechnologyCard from "./TechnologyCard";
+import TechnologyCard from "./_components/TechnologyCard";
 import "./skillsSection.scss";
 import { motion } from "framer-motion";
 
@@ -21,12 +21,7 @@ const SkillsSection = () => {
     return acc;
   }, {});
 
-  const categoryOrder = [
-    "Language",
-    "Frontend",
-    "Backend & Cloud",
-    "Database",
-  ];
+  const categoryOrder = ["Language", "Frontend", "Backend & Cloud", "Database"];
 
   // Calculate connections between related skills
   useEffect(() => {
@@ -88,7 +83,8 @@ const SkillsSection = () => {
           >
             <h2 className="skills-title">Tech Stack</h2>
             <p className="skills-subtitle">
-              The tech I use today. (But I'm not married to it— open to dating other frameworks too)
+              The tech I use today. (But I'm not married to it— open to dating
+              other frameworks too)
             </p>
           </motion.div>
         </div>
