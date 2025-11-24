@@ -3,7 +3,7 @@
 
 .contact-section {
   position: relative;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   overflow: hidden;
   min-height: 80vh;
   display: flex;
@@ -18,10 +18,31 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba($primary, 0.15) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba($primary, 0.15) 0%,
+      transparent 70%
+    );
     filter: blur(80px);
     z-index: 0;
     pointer-events: none;
+  }
+
+  // Background SVG pattern
+  .contact-bg-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("../../../assets/svgs/curvesbg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -35,10 +56,10 @@
 .contact-card {
   @include card;
   padding: 0; // Reset padding from mixin to allow split pane
-  
+
   display: grid;
   grid-template-columns: 1fr;
-  
+
   // Consistent Card Styles (matching Hero Section)
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(
@@ -48,7 +69,7 @@
   );
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
+
   overflow: hidden;
   @include transition(all 300ms cubic-bezier(0.4, 0, 0.2, 1));
 
@@ -72,7 +93,11 @@
 .contact-info {
   padding: 3rem;
   // Subtle gradient that blends with the main card background
-  background: linear-gradient(135deg, rgba($primary, 0.05) 0%, rgba($secondary, 0.02) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba($primary, 0.05) 0%,
+    rgba($secondary, 0.02) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -94,7 +119,7 @@
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.1;
-      
+
       @include below_breakpoint(m) {
         font-size: clamp(2rem, 8vw, 2.5rem);
       }
@@ -161,15 +186,16 @@
 
     .form-group {
       position: relative;
-      
+
       &.full-width {
         grid-column: span 2;
       }
 
-      input, textarea {
+      input,
+      textarea {
         width: 100%;
         padding: 1.5rem 1rem 0.5rem; // Top padding for label space
-        background: rgba($bgTertiary, 0.3); 
+        background: rgba($bgTertiary, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         color: #fff;
@@ -246,15 +272,20 @@
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @include below_breakpoint(m) {
-  .contact-info, .contact-form-wrapper {
+  .contact-info,
+  .contact-form-wrapper {
     padding: 2rem;
   }
-  
+
   .contact-info .info-header h2 {
     font-size: 2rem;
   }

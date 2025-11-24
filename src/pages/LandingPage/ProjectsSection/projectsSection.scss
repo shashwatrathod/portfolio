@@ -2,7 +2,7 @@
 @import "../../../mixins";
 
 .projects-section {
-  padding: 120px 0;
+  padding: clamp(48px, 6vw, 72px) 0;
   background-color: $bgPrimary;
   position: relative;
   overflow: hidden;
@@ -60,7 +60,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 32px;
-  
+
   @media (max-width: 768px) {
     display: flex;
     overflow-x: auto;
@@ -72,7 +72,7 @@
     padding-right: 20px; // Restore padding
     scroll-padding-left: 20px; // Align snap points with padding
     align-items: stretch; // Ensure all cards are the same height
-    
+
     // Hide scrollbar
     scrollbar-width: none;
     &::-webkit-scrollbar {

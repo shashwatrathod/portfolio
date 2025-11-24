@@ -4,7 +4,7 @@
 // Skills Section Container
 .skills-section {
   position: relative;
-  padding: clamp(80px, 10vw, 120px) 0;
+  padding: clamp(48px, 6vw, 72px) 0;
   overflow: hidden;
 
   // Poly background for "oomph" factor
@@ -21,7 +21,7 @@
   }
 
   @include below_breakpoint(m) {
-    padding: clamp(60px, 8vw, 80px) 0;
+    padding: clamp(36px, 5vw, 56px) 0;
   }
 
   // Use global container-max with additional z-index for layering
@@ -161,4 +161,3 @@
     transition: none !important;
   }
 }
-

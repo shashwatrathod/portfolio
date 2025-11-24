@@ -16,8 +16,8 @@ const socials = [
   {
     title: "Mail",
     icon: <FaEnvelope className="social-icon" />,
-    username: "shashwatrathod22@gmail.com",
-    link: "mailto:shashwatrathod22@gmail.com",
+    username: "ask.shashwatrathod@gmail.com",
+    link: "mailto:ask.shashwatrathod@gmail.com",
   },
 ];
 

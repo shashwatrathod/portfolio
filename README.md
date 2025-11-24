@@ -20,7 +20,7 @@ When I'm not coding, I spend my time playing CS:GO and watching documentries abo
 
 ## 🤝 Connect with me
 
-[<img src="./images/linkedin.svg" width="48" title="LinkedIN" style="margin:20px">](https://www.linkedin.com/in/shashwat-rathod/) [<img src="./images/gmail.svg" width="48" title="Email" style="margin:20px">](mailto:shashwatrathod22@gmail.com) [<img src="./images/github.svg" width="48" title="Github" style="margin:20px">](github.com/shashwatrathod)
+[<img src="./images/linkedin.svg" width="48" title="LinkedIN" style="margin:20px">](https://www.linkedin.com/in/shashwat-rathod/) [<img src="./images/gmail.svg" width="48" title="Email" style="margin:20px">](mailto:ask.shashwatrathod@gmail.com) [<img src="./images/github.svg" width="48" title="Github" style="margin:20px">](github.com/shashwatrathod)
 
 ## 🤖 Technologies Used
 

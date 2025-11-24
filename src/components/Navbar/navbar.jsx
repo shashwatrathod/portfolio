@@ -41,7 +41,10 @@ const Navbar = () => {
               offset={-80}
               className="nav-scroll-link"
             >
-              <span className="prompt-prefix">~$</span> ./rathod.sh <span className="blinking-cursor"></span>
+              <span className="prompt-prefix">~$</span>{" "}
+              <span className="nav-title--long">./rathod.sh</span>
+              <span className="nav-title--short">./r.sh</span>
+              <span className="blinking-cursor"></span>
             </ScrollLink>
           </div>
           <ul

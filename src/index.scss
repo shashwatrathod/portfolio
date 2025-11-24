@@ -22,7 +22,7 @@ body {
 
 #root {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
 }
 
 /* width */
@@ -44,5 +44,9 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, lighten($primary, 5%) 0%, lighten($secondary, 5%) 100%);
+  background: linear-gradient(
+    135deg,
+    lighten($primary, 5%) 0%,
+    lighten($secondary, 5%) 100%
+  );
 }

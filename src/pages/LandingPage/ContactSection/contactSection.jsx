@@ -58,8 +58,9 @@ const ContactSection = () => {
     <>
       <section id="contact" className="contact-section">
         <div className="contact-bg-glow" />
-        
-        <motion.div 
+        <div className="contact-bg-pattern" />
+
+        <motion.div
           className="contact-container"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +71,7 @@ const ContactSection = () => {
             {/* Left Pane - Info */}
             <div className="contact-info">
               <div className="info-header">
-                <motion.h2 
+                <motion.h2
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
@@ -82,20 +83,28 @@ const ContactSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                  I'm always open to discussing new projects, creative ideas, or
+                  opportunities to be part of your visions.
                 </motion.p>
               </div>
 
               <div className="info-details">
                 <div className="social-links">
-                  <a href="https://github.com/shashwatrathod" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <a
+                    href="https://github.com/shashwatrathod"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                  >
                     <FiGithub />
                   </a>
-                  <a href="https://linkedin.com/in/shashwatrathod" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <a
+                    href="https://linkedin.com/in/shashwatrathod"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                  >
                     <FiLinkedin />
-                  </a>
-                  <a href="https://twitter.com/shashwatrathod" target="_blank" rel="noreferrer" aria-label="Twitter">
-                    <FiTwitter />
                   </a>
                 </div>
               </div>
@@ -147,12 +156,16 @@ const ContactSection = () => {
                   <label htmlFor="message">Message</label>
                 </div>
 
-                <button 
-                  type="submit" 
-                  className={`submit-btn ${submitDisabled ? 'disabled' : ''}`}
+                <button
+                  type="submit"
+                  className={`submit-btn ${submitDisabled ? "disabled" : ""}`}
                   disabled={submitDisabled}
                 >
-                  {submitDisabled ? <AiOutlineLoading className="spinner" /> : <FiSend />}
+                  {submitDisabled ? (
+                    <AiOutlineLoading className="spinner" />
+                  ) : (
+                    <FiSend />
+                  )}
                   <span>Send Message</span>
                 </button>
               </form>

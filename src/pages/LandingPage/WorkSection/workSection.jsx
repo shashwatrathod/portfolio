@@ -15,9 +15,9 @@ const WorkSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="work-title">Life Journey</h2>
+            <h2 className="work-title">Experience</h2>
             <p className="work-subtitle">
-              My professional and academic path.
+              My professional journey.
             </p>
           </motion.div>
         </div>
