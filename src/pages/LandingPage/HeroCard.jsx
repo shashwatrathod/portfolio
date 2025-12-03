@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import "./heroCard.scss";
-import PillButton from "../../components/PillButton/pillButton";
+import { SpacetimeCanvas } from "react-spacetime-fabric";
 import { Link as ScrollLink } from "react-scroll";
 import socials from "../../assets/data/socials";
 import StarField from "./components/StarField/StarField";
@@ -32,9 +32,60 @@ const HeroCard = () => {
     clamp: { min: 20, max: 80 },
   });
 
+  const spacetimeConfig = {
+    grid: {
+      spacing: 35,
+      stiffness: 0.3,
+      damping: 0.92,
+    },
+    gravity: {
+      strength: -12,
+      radius: 265,
+      divergence: 0.4,
+      activationLatency: 0,
+    },
+    pulsing: {
+      enabled: true,
+      speed: 1.4,
+      depth: 0.6,
+    },
+    signal: {
+      enabled: false,
+      speed: 15,
+      randomness: 0,
+    },
+    render: {
+      points: true,
+      lines: false,
+      motion: {
+        enabled: true,
+        speedThreshold: 0.5,
+        displacementThreshold: 0.6,
+      },
+      particles: {
+        baseSize: 0.7,
+        baseOpacity: 0.1,
+        sizeVariance: 1.4,
+        opacityVariance: 0.5,
+        shape: "star",
+        color: "#94a3b8",
+      },
+      colorScheme: "neon",
+    },
+  };
+
   return (
-    <section id="home" aria-label="Intro">
-      <div className="container-max">
+    <section id="home" aria-label="Intro" style={{ position: "relative" }}>
+      <div
+        className="hero-canvas-background"
+        style={{ position: "absolute", inset: 0, zIndex: 0 }}
+      >
+        <SpacetimeCanvas config={spacetimeConfig} />
+      </div>
+      <div
+        className="container-max"
+        style={{ position: "relative", zIndex: 1 }}
+      >
         <div
           className="hero-bento-grid"
           role="region"

@@ -73,6 +73,9 @@ importers:
       react-scroll:
         specifier: ^1.8.3
         version: 1.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react-spacetime-fabric:
+        specifier: ^0.2.0
+        version: 0.2.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react-tooltip:
         specifier: ^4.2.21
         version: 4.5.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -5821,6 +5824,12 @@ packages:
     peerDependencies:
       react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  react-spacetime-fabric@0.2.0:
+    resolution: {integrity: sha512-gY4OPWN/2/V1HP/c2k+hChrafWiWXE836TWGjRFOEED90xlWuVDYgZ12BZbEZYaWzZMMMjZgotPstdTiIxjWuA==}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   react-tooltip@4.5.1:
     resolution: {integrity: sha512-Zo+CSFUGXar1uV+bgXFFDe7VeS2iByeIp5rTgTcc2HqtuOS5D76QapejNNfx320MCY91TlhTQat36KGFTqgcvw==}
@@ -14472,6 +14481,11 @@ snapshots:
     dependencies:
       lodash.throttle: 4.1.1
       prop-types: 15.8.1
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
+  react-spacetime-fabric@0.2.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 

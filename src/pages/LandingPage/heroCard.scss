@@ -1,5 +1,12 @@
 @import "../../_variables.scss";
 @import "../../_mixins.scss";
+@import "../../_mixins.scss";
+
+.hero-canvas-background {
+  @include below_breakpoint(l) {
+    display: none;
+  }
+}
 
 // Bento Grid Container
 .hero-bento-grid {
@@ -230,8 +237,6 @@
       animation: pulse 6s ease-in-out infinite;
     }
 
-
-
     &.star-field {
       top: 0;
       left: 0;
@@ -240,7 +245,7 @@
       opacity: 0.6;
       transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
       transition: transform 1000ms ease-out;
-      
+
       .twinkle-1 {
         animation: twinkle 4s ease-in-out infinite;
       }
@@ -258,19 +263,18 @@
 
 // Info Card SVGs
 .hero-bg-info {
-    &.guitar-strings {
-      top: 50%;
-      left: 50%;
-      width: 140%;
-      height: 140%;
-      transform: translate(-50%, -50%) rotate(-30deg);
-      opacity: 0.12;
-      color: $textPrimary;
-      pointer-events: none;
-    }
+  &.guitar-strings {
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    opacity: 0.12;
+    color: $textPrimary;
+    pointer-events: none;
+  }
 
   .bg-svg {
-
     &.telescope {
       top: 12%;
       right: 10%;
@@ -429,8 +433,6 @@
     transform: rotate(360deg) translateX(10px) rotate(-360deg);
   }
 }
-
-
 
 // Main Card Content
 .main-card-content {
