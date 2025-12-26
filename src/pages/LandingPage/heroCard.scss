@@ -574,7 +574,9 @@
 .hero-stats {
   position: relative;
   z-index: 1;
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(12px, 2vw, 20px);
   width: 100%;

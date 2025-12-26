@@ -34,13 +34,13 @@ const HeroCard = () => {
 
   const spacetimeConfig = {
     grid: {
-      spacing: 35,
+      spacing: 30,
       stiffness: 0.3,
       damping: 0.92,
     },
     gravity: {
       strength: -12,
-      radius: 265,
+      radius: 230,
       divergence: 0.4,
       activationLatency: 0,
     },
@@ -63,7 +63,7 @@ const HeroCard = () => {
         displacementThreshold: 0.6,
       },
       particles: {
-        baseSize: 0.7,
+        baseSize: 0.1,
         baseOpacity: 0.1,
         sizeVariance: 1.4,
         opacityVariance: 0.5,
@@ -109,16 +109,16 @@ const HeroCard = () => {
                 Shashwat Rathod
               </h1>
               <p className="hero-key-phrases">
-                Scalable Backends • Intuitive Frontends • Complex Problems
+                Scalable Backends • Complex Problems • Elegant Solutions
               </p>
               <h2 className="hero-value-prop">
-                Building systems that scale, interfaces that shine
+                Building systems that scale, abstractions that work.
               </h2>
               <p className="hero-tech-desc">
-                I bridge the gap between complex backend architecture and
-                intuitive user experiences. Whether it's building
-                high-throughput microservices or crafting pixel-perfect UIs, I
-                build software that works as good as it looks.
+                My expertise lies in analyzing complex problems, conducting
+                rigorous research, and evaluating solutions based on multiple
+                factors. I champion clean, maintainable codebases and long-term,
+                scalable solutions.
               </p>
               <ScrollLink
                 to="projects"
@@ -181,14 +181,11 @@ const HeroCard = () => {
             ref={statsCardRef}
             onMouseMove={handleStatsMouseMove}
           >
-            <div className="hero-bg-elements hero-bg-stats" aria-hidden="true">
-              <GameControllerSVG />
-            </div>
             <div className="hero-stats">
-              <div className="stat-item">
+              {/* <div className="stat-item">
                 <div className="stat-label">Users Impacted</div>
                 <div className="stat-value">2M+</div>
-              </div>
+              </div> */}
               <div className="stat-item">
                 <div className="stat-label">Coffee consumed</div>
                 <div className="stat-value">∞ cups</div>
@@ -235,21 +232,23 @@ const HeroCard = () => {
                   <div className="currently-icon">💻</div>
                   <div className="currently-content">
                     <div className="currently-title">Building</div>
-                    <div className="currently-desc">Scalable microservices</div>
+                    <div className="currently-desc">react-spacetime-fabric</div>
                   </div>
                 </div>
                 <div className="currently-item">
                   <div className="currently-icon">📚</div>
                   <div className="currently-content">
-                    <div className="currently-title">Learning</div>
-                    <div className="currently-desc">Distributed systems</div>
+                    <div className="currently-title">Reading</div>
+                    <div className="currently-desc">
+                      Patterns of Distributed Systems
+                    </div>
                   </div>
                 </div>
                 <div className="currently-item">
                   <div className="currently-icon">🎮</div>
                   <div className="currently-content">
                     <div className="currently-title">Playing</div>
-                    <div className="currently-desc">Competitive games</div>
+                    <div className="currently-desc">Ghost of Yotei</div>
                   </div>
                 </div>
                 <div className="currently-item">
