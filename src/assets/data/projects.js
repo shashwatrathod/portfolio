@@ -25,7 +25,7 @@ const projects = [
         icon: <FaGithub />,
         href: "https://github.com/shashwatrathod/GoStoredis",
         alt: "github repository",
-        label: "View on github",
+        label: "Github",
       },
     ],
     description:
@@ -57,7 +57,7 @@ const projects = [
         icon: <FaGithub />,
         href: "https://github.com/shashwatrathod/spotify-stats",
         alt: "github repository",
-        label: "View on github",
+        label: "Github",
       },
       // {
       //   icon: <RiShareBoxFill />,
@@ -91,13 +91,13 @@ const projects = [
         icon: <FaGithub />,
         href: "https://github.com/shashwatrathod/conways-game-of-life",
         alt: "github repository",
-        label: "View on github",
+        label: "Github",
       },
       {
         icon: <RiShareBoxFill />,
         href: "https://game-of-life.shashwatrathod.com/",
         alt: "website",
-        label: "Visit the website",
+        label: "View",
       },
     ],
     description:
@@ -121,7 +121,7 @@ const projects = [
         icon: <IoLogoGooglePlaystore />,
         href: "https://play.google.com/store/apps/details?id=com.Teknack.Balley&hl=en_IN&gl=US",
         alt: "visit play store",
-        label: "View on Google Play Store",
+        label: "Play Store",
       },
     ],
     description:
@@ -173,7 +173,7 @@ const projects = [
         icon: <FaGithub />,
         href: "https://github.com/shashwatrathod/VisualOccupancyDetectionSystem",
         alt: "github repository",
-        label: "View on github",
+        label: "Github",
       },
     ],
     description:
@@ -181,7 +181,7 @@ const projects = [
   },
   {
     title: "Portfolio",
-    thumbnailSrc: "/images/thumbnails/portfolio-thumb.png",
+    thumbnailSrc: "/images/thumbnails/portfolio.png",
     technologies: [
       {
         icon: "/images/icons/react-icon.png",
@@ -209,17 +209,17 @@ const projects = [
         icon: <FaGithub />,
         href: "https://github.com/shashwatrathod/portfolio",
         alt: "github repository",
-        label: "View on github",
+        label: "Github",
       },
       {
         icon: <RiShareBoxFill />,
-        href: "https://shashwatrathod.netlify.app/",
+        href: "https://www.shashwatrathod.com/",
         alt: "website",
-        label: "Visit the website",
+        label: "Visit",
       },
     ],
     description:
-      "A modern, high-performance portfolio website built with React and Sass. Features a custom 'Cinematic Minimalist' design system, responsive grid layouts, and subtle micro-interactions. Engineered for maintainability and a premium user experience.",
+      "A modern, high-performance portfolio website built with React and Sass. Features a custom 'Cinematic Minimalist' design system, responsive grid layouts, and subtle micro-interactions.",
   },
 ];
 

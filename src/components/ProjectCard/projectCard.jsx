@@ -31,38 +31,44 @@ const ProjectCard = ({
     if (!cardRef.current) return;
 
     const rect = cardRef.current.getBoundingClientRect();
-    const x = mousePosition.x - (rect.left - document.getElementById("projects").getBoundingClientRect().left);
-    const y = mousePosition.y - (rect.top - document.getElementById("projects").getBoundingClientRect().top);
+    const x =
+      mousePosition.x -
+      (rect.left -
+        document.getElementById("projects").getBoundingClientRect().left);
+    const y =
+      mousePosition.y -
+      (rect.top -
+        document.getElementById("projects").getBoundingClientRect().top);
 
     setLocalCoords({ x, y });
-    
+
     // Calculate opacity based on distance to cursor (optional, for smoother fade)
-    // For now, we'll just set opacity to 1 when hovering the section, 
+    // For now, we'll just set opacity to 1 when hovering the section,
     // but we can refine this to be distance-based if needed.
     setOpacity(1);
   }, [mousePosition]);
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
   };
 
   return (
-    <motion.article 
+    <motion.article
       className="project-card"
       ref={cardRef}
       variants={cardVariants}
       whileHover={{ y: -5 }}
     >
       {/* Spotlight Border Effect */}
-      <div 
+      <div
         className="project-card-spotlight"
         style={{
           background: `radial-gradient(
@@ -70,7 +76,7 @@ const ProjectCard = ({
             rgba(125, 211, 252, 0.15),
             transparent 40%
           )`,
-          opacity: opacity
+          opacity: opacity,
         }}
       />
 
@@ -84,7 +90,7 @@ const ProjectCard = ({
           />
           <div className="project-card-overlay" />
         </div>
-        
+
         <div className="project-card-content">
           <div className="project-card-header">
             <h3 className="project-card-title">{title}</h3>
@@ -112,9 +118,7 @@ const ProjectCard = ({
                   aria-label={`Visit ${link.label}`}
                 >
                   {getLinkIcon(link.label)}
-                  <span className="project-card-link-text">
-                    {getLinkLabel(link.label)}
-                  </span>
+                  <span className="project-card-link-text">{link.label}</span>
                 </a>
               ))}
             </div>
