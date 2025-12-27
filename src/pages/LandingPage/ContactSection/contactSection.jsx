@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./contactSection.scss";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { FiGithub, FiLinkedin, FiTwitter, FiSend } from "react-icons/fi";
 import { AiOutlineLoading } from "react-icons/ai";
 import Snackbar from "../../../components/Snackbar/snackbar";
@@ -33,7 +33,9 @@ const ContactSection = () => {
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         template_params,
-        process.env.REACT_APP_EMAILJS_USER_ID
+        {
+          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        }
       )
       .then((res) => {
         nameRef.current.value = "";

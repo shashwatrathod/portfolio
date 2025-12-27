@@ -8,12 +8,13 @@
     "pnpm": ">=10.20.0"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@vercel/analytics": "^1.6.1",
     "clsx": "^1.2.1",
-    "emailjs-com": "^3.2.0",
+    "emailjs": "^5.0.0",
     "framer-motion": "^12.23.26",
     "next": "^16.1.1",
     "react": "^19.2.3",
